@@ -23,21 +23,22 @@
 <!-- ===== COVER / OPENING ===== -->
 <section id="cover">
   <canvas id="particles"></canvas>
-  <div class="light-rays"></div>
+  <div class="cover-bg">
+    <img src="assets/hero.jpeg" alt="Alan &amp; Kris">
+  </div>
+  <div class="cover-gradient"></div>
   <div class="cover-content">
-    <div class="cross-icon">✞</div>
-    <p class="wedding-label">Undangan Pernikahan</p>
-    <h1 class="couple-names">Alan<span class="amp"> &amp; </span>Kris</h1>
-    <div class="verse-box">
-      <p class="verse-text">"Kasih itu sabar; kasih itu murah hati; ia tidak cemburu. Kasih tidak memegahkan diri dan tidak sombong. Ia tidak melakukan yang tidak sopan dan tidak mencari keuntungan diri sendiri."</p>
-      <p class="verse-ref">— 1 Korintus 13:4–5</p>
+    <div class="cover-title-area">
+      <p class="wedding-label">The Wedding of</p>
+      <h1 class="couple-names">Alan<span class="amp"> &amp; </span>Kris</h1>
     </div>
-    <div class="guest-label" id="guestLabel">
-      <span class="guest-to">Kepada Yth.</span>
-      <span class="guest-name" id="guestName">Tamu Undangan</span>
+    <div class="cover-footer">
+      <div class="guest-label" id="guestLabel">
+        <span class="guest-to">Dear,</span>
+        <span class="guest-name" id="guestName">Tamu Undangan</span>
+      </div>
+      <button class="open-btn" id="openBtn">Buka Undangan</button>
     </div>
-
-    <button class="open-btn" id="openBtn">Buka Undangan</button>
   </div>
 </section>
 
@@ -58,29 +59,9 @@
         <span class="ornament-cross">✦</span>
         <span class="ornament-line"></span>
       </div>
+      <span class="hero-amp">&amp;</span>
       <h2 class="hero-name">Kris Daniel</h2>
       <p class="hero-date">Jumat, 26 Juni 2026</p>
-      <div class="countdown">
-        <div class="count-box">
-          <div class="count-num" id="cdDays">00</div>
-          <div class="count-label">Hari</div>
-        </div>
-        <div class="count-sep">·</div>
-        <div class="count-box">
-          <div class="count-num" id="cdHours">00</div>
-          <div class="count-label">Jam</div>
-        </div>
-        <div class="count-sep">·</div>
-        <div class="count-box">
-          <div class="count-num" id="cdMinutes">00</div>
-          <div class="count-label">Menit</div>
-        </div>
-        <div class="count-sep">·</div>
-        <div class="count-box">
-          <div class="count-num" id="cdSeconds">00</div>
-          <div class="count-label">Detik</div>
-        </div>
-      </div>
       <div class="scroll-hint">
         <span>↓</span>
       </div>
@@ -194,6 +175,27 @@
     <div class="section-content">
       <h3 class="section-title fade-in">Rangkaian Acara</h3>
       <p class="section-sub fade-in">Dengan sukacita kami mengundang Anda untuk merayakan bersama kami</p>
+      <div class="countdown fade-in">
+        <div class="count-box">
+          <div class="count-num" id="cdDays">00</div>
+          <div class="count-label">Hari</div>
+        </div>
+        <div class="count-sep">·</div>
+        <div class="count-box">
+          <div class="count-num" id="cdHours">00</div>
+          <div class="count-label">Jam</div>
+        </div>
+        <div class="count-sep">·</div>
+        <div class="count-box">
+          <div class="count-num" id="cdMinutes">00</div>
+          <div class="count-label">Menit</div>
+        </div>
+        <div class="count-sep">·</div>
+        <div class="count-box">
+          <div class="count-num" id="cdSeconds">00</div>
+          <div class="count-label">Detik</div>
+        </div>
+      </div>
       <div class="events-grid">
         <div class="event-card fade-in">
           <div class="cross-small">✞</div>
