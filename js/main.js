@@ -3,6 +3,10 @@
    Particles · Cover · Scroll Animations · Music · Forms
 ===================================================== */
 
+// ===== SCROLL RESTORATION =====
+if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+window.scrollTo(0, 0);
+
 // ===== GUEST NAME FROM URL PARAMETER =====
 (function() {
   var params  = new URLSearchParams(window.location.search);
@@ -134,6 +138,7 @@ openBtn.addEventListener('click', () => {
   setTimeout(() => {
     cancelAnimationFrame(animFrame);
     cover.style.display = 'none';
+    window.scrollTo({ top: 0, behavior: 'instant' });
   }, 1400);
 
   tryPlayMusic();
