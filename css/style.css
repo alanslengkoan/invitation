@@ -1,6 +1,6 @@
 /* ===================================================
    WEDDING INVITATION — Elegant & Luxury CSS
-   Color Palette: Gold · White · Black
+   Color Palette: Gold · White · Burgundy
 =================================================== */
 
 :root {
@@ -10,12 +10,13 @@
   --gold-dark: #8b6914;
   --gold-glow: rgba(201, 168, 76, 0.15);
   --white: #fdf8f0;
-  --off-white: #f0e6d3;
-  --black: #050505;
-  --dark: #0d0d0d;
-  --dark2: #141414;
-  --dark3: #1a1a1a;
-  --text-muted: rgba(240, 230, 211, 0.65);
+  --off-white: #f5e8ee;
+  --black: #130008;
+  --dark: #1e000e;
+  --dark2: #280014;
+  --dark3: #32001a;
+  --text-muted: rgba(240, 210, 220, 0.65);
+  --rose-muted: rgba(235, 190, 208, 0.72);
   --font-serif: 'Cormorant Garamond', 'EB Garamond', Georgia, serif;
   --transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
@@ -46,7 +47,7 @@ a { text-decoration: none; }
   inset: 0;
   display: flex;
   align-items: stretch;
-  background: #000;
+  background: #0a0004;
   z-index: 1000;
   transition: opacity 1.2s ease, visibility 1.2s ease;
 }
@@ -94,10 +95,10 @@ a { text-decoration: none; }
   z-index: 1;
   background: linear-gradient(
     to bottom,
-    rgba(0,0,0,0.78) 0%,
-    rgba(0,0,0,0.08) 38%,
-    rgba(0,0,0,0.08) 58%,
-    rgba(0,0,0,0.82) 100%
+    rgba(19,0,8,0.88) 0%,
+    rgba(10,0,4,0.06) 38%,
+    rgba(10,0,4,0.06) 58%,
+    rgba(19,0,8,0.88) 100%
   );
   pointer-events: none;
 }
@@ -142,9 +143,8 @@ a { text-decoration: none; }
   font-size: 0.8rem;
   letter-spacing: 0.5em;
   text-transform: uppercase;
-  color: var(--gold-light);
+  color: var(--rose-muted);
   margin-bottom: 0.8rem;
-  opacity: 0.85;
 }
 
 .couple-names {
@@ -333,18 +333,53 @@ a { text-decoration: none; }
   background: var(--dark);
 }
 
-.hero-photo {
+.hero-slider {
   position: absolute;
   inset: 0;
   z-index: 0;
 }
 
-.hero-photo img {
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 1.6s ease;
+}
+
+.hero-slide.active { opacity: 1; }
+
+.hero-slide img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   opacity: 0.25;
   filter: sepia(30%) saturate(80%);
+}
+
+.hero-dots {
+  position: absolute;
+  bottom: 22px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  display: flex;
+  gap: 10px;
+}
+
+.hero-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgba(201,168,76,0.35);
+  border: 1px solid rgba(201,168,76,0.55);
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+.hero-dot.active {
+  background: var(--gold);
+  transform: scale(1.35);
+  border-color: var(--gold-light);
 }
 
 .hero-overlay {
@@ -365,7 +400,7 @@ a { text-decoration: none; }
 
 .grace-text {
   font-style: italic;
-  color: var(--gold-light);
+  color: var(--rose-muted);
   letter-spacing: 0.08em;
   font-size: 1rem;
   margin-bottom: 2.5rem;
@@ -1070,7 +1105,7 @@ blockquote cite {
 }
 
 .env-body {
-  background: linear-gradient(160deg, #1e1808 0%, #2a200a 50%, #1a1405 100%);
+  background: linear-gradient(160deg, #2a0012 0%, #3d001c 50%, #1e000c 100%);
   border: 1px solid rgba(201,168,76,0.4);
   position: relative;
   overflow: hidden;
@@ -1351,7 +1386,7 @@ blockquote cite {
 
 /* ===== CLOSING ===== */
 #closing {
-  background: radial-gradient(ellipse at 50% 30%, #1c1400 0%, #0a0700 40%, #000 100%);
+  background: radial-gradient(ellipse at 50% 30%, #3d0018 0%, #1a0009 40%, #0a0004 100%);
   position: relative;
   overflow: hidden;
 }
@@ -1462,7 +1497,7 @@ blockquote cite {
 #preloader {
   position: fixed;
   inset: 0;
-  background: #000;
+  background: #0a0004;
   z-index: 9999;
   display: flex;
   align-items: center;
@@ -1755,6 +1790,21 @@ button.fn-item {
   animation: musicPulse 2s ease-in-out infinite;
 }
 
+.fn-lang {
+  font-family: var(--font-serif);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  color: var(--gold-light);
+  min-width: 32px;
+}
+
+.fn-lang:hover {
+  color: var(--white);
+  background: rgba(201,168,76,0.15);
+  border-radius: 6px;
+}
+
 .fn-sep {
   width: 1px;
   height: 18px;
@@ -1775,10 +1825,10 @@ section:not(#cover) { position: relative; }
 
 .floral-frame i {
   position: absolute;
-  width: clamp(50px, 8vw, 68px);
-  height: clamp(50px, 8vw, 68px);
+  width: clamp(60px, 10vw, 88px);
+  height: clamp(60px, 10vw, 88px);
   display: block;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 60'%3E%3Cpath fill='none' stroke='%23c9a84c' stroke-width='1' d='M5 18V5H18' opacity='.7'/%3E%3Cpath fill='none' stroke='%23c9a84c' stroke-width='.5' d='M5 58Q5 5 58 5' opacity='.3'/%3E%3Ccircle cx='14' cy='46' r='4' fill='none' stroke='%23c9a84c' stroke-width='.8' opacity='.55'/%3E%3Ccircle cx='14' cy='46' r='1.8' fill='%23c9a84c' opacity='.35'/%3E%3Ccircle cx='32' cy='27' r='4' fill='none' stroke='%23c9a84c' stroke-width='.8' opacity='.55'/%3E%3Ccircle cx='32' cy='27' r='1.8' fill='%23c9a84c' opacity='.35'/%3E%3Ccircle cx='48' cy='12' r='4' fill='none' stroke='%23c9a84c' stroke-width='.8' opacity='.55'/%3E%3Ccircle cx='48' cy='12' r='1.8' fill='%23c9a84c' opacity='.35'/%3E%3Cpath fill='none' stroke='%23c9a84c' stroke-width='.6' d='M18 42Q24 36 28 30' opacity='.45'/%3E%3Cpath fill='none' stroke='%23c9a84c' stroke-width='.6' d='M36 23Q42 17 45 14' opacity='.45'/%3E%3C/svg%3E") no-repeat center / contain;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80'%3E%3Cpath fill='none' stroke='%23c9a84c' stroke-width='1.4' d='M6 28V6H28' opacity='.82'/%3E%3Cpath fill='none' stroke='%23c9a84c' stroke-width='.5' d='M10 28V10H28' opacity='.28'/%3E%3Cpath fill='none' stroke='%23c9a84c' stroke-width='.4' d='M6 74Q6 6 74 6' opacity='.13'/%3E%3Cellipse cx='18' cy='18' rx='3.5' ry='7.5' fill='%23c9a84c' opacity='.38' transform='rotate(0,18,18)'/%3E%3Cellipse cx='18' cy='18' rx='3.5' ry='7.5' fill='%23c9a84c' opacity='.38' transform='rotate(60,18,18)'/%3E%3Cellipse cx='18' cy='18' rx='3.5' ry='7.5' fill='%23c9a84c' opacity='.38' transform='rotate(120,18,18)'/%3E%3Cellipse cx='18' cy='18' rx='2.8' ry='6' fill='%23c9a84c' opacity='.44' transform='rotate(30,18,18)'/%3E%3Cellipse cx='18' cy='18' rx='2.8' ry='6' fill='%23c9a84c' opacity='.44' transform='rotate(90,18,18)'/%3E%3Cellipse cx='18' cy='18' rx='2.8' ry='6' fill='%23c9a84c' opacity='.44' transform='rotate(150,18,18)'/%3E%3Ccircle cx='18' cy='18' r='4.5' fill='%23c9a84c' opacity='.8'/%3E%3Ccircle cx='18' cy='18' r='2' fill='%23fff8e8' opacity='.65'/%3E%3Cpath fill='%23c9a84c' d='M6 42C3 35 10 30 15 32 13 39 6 42 6 42Z' opacity='.45'/%3E%3Cpath fill='none' stroke='%23c9a84c' stroke-width='.6' d='M6 42Q10 36 15 32' opacity='.38'/%3E%3Cpath fill='%23c9a84c' d='M42 6C35 3 30 10 32 15 39 13 42 6 42 6Z' opacity='.45'/%3E%3Cpath fill='none' stroke='%23c9a84c' stroke-width='.6' d='M42 6Q36 10 32 15' opacity='.38'/%3E%3Ccircle cx='6' cy='56' r='3.5' fill='none' stroke='%23c9a84c' stroke-width='.9' opacity='.5'/%3E%3Ccircle cx='6' cy='56' r='1.5' fill='%23c9a84c' opacity='.55'/%3E%3Cpath fill='none' stroke='%23c9a84c' stroke-width='.55' d='M6 52Q7 47 9 43' opacity='.32'/%3E%3Cpath fill='%23c9a84c' d='M8 49Q5 45 9 43Q11 47 8 49Z' opacity='.4'/%3E%3Ccircle cx='56' cy='6' r='3.5' fill='none' stroke='%23c9a84c' stroke-width='.9' opacity='.5'/%3E%3Ccircle cx='56' cy='6' r='1.5' fill='%23c9a84c' opacity='.55'/%3E%3Cpath fill='none' stroke='%23c9a84c' stroke-width='.55' d='M52 6Q47 7 43 9' opacity='.32'/%3E%3Cpath fill='%23c9a84c' d='M49 8Q45 5 43 9Q47 11 49 8Z' opacity='.4'/%3E%3C/svg%3E") no-repeat center / contain;
 }
 
 .floral-frame i:nth-child(1) { top: 14px;    left: 14px; }

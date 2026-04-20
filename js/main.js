@@ -46,16 +46,37 @@ window.scrollTo(0, 0);
   }
 })();
 
+// ===== HERO SLIDER =====
+(function() {
+  var slides = document.querySelectorAll('.hero-slide');
+  var dots   = document.querySelectorAll('.hero-dot');
+  if (!slides.length) return;
+  var current = 0;
+  function goTo(idx) {
+    slides[current].classList.remove('active');
+    dots[current].classList.remove('active');
+    current = (idx + slides.length) % slides.length;
+    slides[current].classList.add('active');
+    dots[current].classList.add('active');
+  }
+  dots.forEach(function(dot, i) {
+    dot.addEventListener('click', function() { goTo(i); });
+  });
+  setInterval(function() { goTo(current + 1); }, 5000);
+})();
+
 // ===== HERO PARALLAX =====
 (function() {
-  var heroImg = document.querySelector('.hero-photo img');
-  if (!heroImg) return;
   var heroSection = document.getElementById('hero');
+  if (!heroSection) return;
   function onScroll() {
     var rect   = heroSection.getBoundingClientRect();
     var inView = rect.bottom > 0 && rect.top < window.innerHeight;
     if (!inView) return;
-    heroImg.style.transform = 'translateY(' + (rect.top * 0.25) + 'px)';
+    var offset = rect.top * 0.25 + 'px';
+    heroSection.querySelectorAll('.hero-slide img').forEach(function(img) {
+      img.style.transform = 'translateY(' + offset + ')';
+    });
   }
   window.addEventListener('scroll', onScroll, { passive: true });
 })();
@@ -534,3 +555,186 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
+
+// ===== MULTILANGUAGE =====
+(function() {
+  var t = {
+    id: {
+      'open-btn':           'Buka Undangan',
+      'guest-name-default': 'Tamu Undangan',
+      'grace-text':         'Dengan anugerah Tuhan, kami dipersatukan dalam ikatan suci pernikahan',
+      'profil-title':       'Mempelai',
+      'profil-sub':         'Yang berbahagia dipersatukan dalam anugerah-Nya',
+      'role-groom':         'Mempelai Pria',
+      'role-bride':         'Mempelai Wanita',
+      'parents-groom':      'Putra dari',
+      'parents-bride':      'Putri dari',
+      'verse-main':         '"Demikianlah tinggal ketiga hal ini, yaitu iman, pengharapan dan kasih,<br>dan yang paling besar di antaranya ialah kasih."',
+      'verse-cite':         '— 1 Korintus 13:13',
+      'ls-title':           'Kisah Cinta Kami',
+      'ls-sub':             'Sembilan tahun semesta merajut cerita ini',
+      'tl-2017a-h':         'Berawal dari Percakapan Sederhana',
+      'tl-2017a-p':         'Di tahun ketiga perkuliahan, semesta mulai merajut cerita kami — dari percakapan sederhana di layar, dengan alasan yang terdengar biasa, namun perlahan membawa kami saling mengenal.',
+      'tl-2017b-h':         'Pertemuan Pertama di Bazar',
+      'tl-2017b-p':         'Pertemuan pertama di sebuah bazar kecil menjadi awal, di mana tawa terasa ringan dan percakapan mengalir tanpa jeda. Sejak saat itu, kami berjalan sebagai sahabat — saling menguatkan, saling menjaga, dalam langkah yang tenang dan sederhana.',
+      'tl-2021-h':          'Dipertemukan Kembali',
+      'tl-2021-p':          'Meski sempat terpisah oleh jarak dan kesibukan, cerita ini tidak benar-benar usai. Kami dipertemukan kembali dalam versi yang lebih dewasa, lebih siap — dan kali ini, kami memilih untuk berjalan ke arah yang sama.',
+      'tl-2026-h':          'Bersama, Selamanya',
+      'tl-2026-p':          'Lebih dari lima tahun kami berjalan berdampingan, menjaga apa yang sudah lama ada. Kini, kami memutuskan untuk tidak lagi berjalan sendiri — melainkan bersama, selamanya.',
+      'events-title':       'Rangkaian Acara',
+      'events-sub':         'Dengan sukacita kami mengundang Anda untuk merayakan bersama kami',
+      'cd-days':            'Hari',
+      'cd-hours':           'Jam',
+      'cd-minutes':         'Menit',
+      'cd-seconds':         'Detik',
+      'ev1-title':          'Pemberkatan Nikah',
+      'ev1-date':           'Jumat, 26 · 06 · 2026',
+      'ev2-title':          'Resepsi Pernikahan',
+      'ev2-date':           'Jumat, 26 · 06 · 2026',
+      'map-btn':            'Lihat di Peta ↗',
+      'save-date-text':     'Tandai harinya agar tidak terlewat',
+      'save-date-btn':      'Simpan Tanggal',
+      'gallery-title':      'Momen Kami',
+      'gallery-sub':        'Sekilas perjalanan cinta kami bersama',
+      'rsvp-title':         'Konfirmasi Kehadiran',
+      'rsvp-sub':           'Mohon konfirmasi kehadiran Anda sebelum 1 · 06 · 2026',
+      'rsvp-ph-name':       'Nama Lengkap Anda',
+      'rsvp-ph-phone':      'Nomor Telepon',
+      'rsvp-opt-default':   'Apakah Anda akan hadir?',
+      'rsvp-opt-yes':       'Ya, saya akan hadir',
+      'rsvp-opt-no':        'Mohon maaf, saya tidak dapat hadir',
+      'rsvp-ph-guests':     'Jumlah Tamu',
+      'rsvp-submit':        'Konfirmasi Kehadiran',
+      'rsvp-success':       '✦ Terima kasih! Kehadiran Anda telah kami catat. ✦',
+      'gb-title':           'Doa & Ucapan',
+      'gb-sub':             'Bagikan doa dan ucapan selamat untuk kedua mempelai',
+      'gb-ph-name':         'Nama Anda',
+      'gb-ph-msg':          'Tuliskan doa dan ucapan selamat untuk Alan & Kris...',
+      'gb-submit':          'Kirim Ucapan',
+      'amplop-sub':         'Doa dan kehadiran Anda adalah hadiah terbesar bagi kami.<br>Bagi yang ingin memberikan berkat, kami dengan rendah hati<br>menerima melalui rekening berikut.',
+      'env-label-to':       'Kepada Yth.',
+      'env-label-from':     'dari',
+      'env-hint':           '— ketuk untuk membuka —',
+      'env-content-label':  'Nomor Rekening',
+      'env-content-sub':    'Pilih bank untuk menyalin nomor rekening',
+      'bank-type':          'Tabungan Individu',
+      'rek-lbl-num':        'Nomor Rekening',
+      'rek-lbl-name':       'Atas Nama',
+      'copy-btn':           'Salin Nomor Rekening',
+      'toast-bca':          'Nomor rekening BCA tersalin ✓',
+      'toast-mandiri':      'Nomor rekening Mandiri tersalin ✓',
+      'qris-title':         'Atau via QRIS',
+      'qris-note':          'Scan QRIS · Berlaku untuk semua aplikasi pembayaran',
+      'close-env':          '— tutup amplop —',
+      'gift-note':          'Kehadiran dan doa Bapak/Ibu/Saudara/i<br>adalah hadiah terbesar dan terindah bagi kami.',
+      'closing-text':       'Dengan hati yang penuh syukur, kami mengucapkan terima kasih telah merayakan momen suci ini bersama kami. Kehadiran Anda adalah berkat terbesar bagi kami.',
+      'closing-verse':      '"Kiranya kasih dan berkat Tuhan menyertai kita semua"',
+      'closing-sub':        '— Bersatu dalam Anugerah Tuhan —'
+    },
+    en: {
+      'open-btn':           'Open Invitation',
+      'guest-name-default': 'Guest',
+      'grace-text':         'By the grace of God, we are united in holy matrimony',
+      'profil-title':       'The Couple',
+      'profil-sub':         'Joyfully united in His grace',
+      'role-groom':         'Groom',
+      'role-bride':         'Bride',
+      'parents-groom':      'Son of',
+      'parents-bride':      'Daughter of',
+      'verse-main':         '"And now these three remain: faith, hope and love.<br>But the greatest of these is love."',
+      'verse-cite':         '— 1 Corinthians 13:13',
+      'ls-title':           'Our Love Story',
+      'ls-sub':             'Nine years in the making',
+      'tl-2017a-h':         'It Began with a Simple Conversation',
+      'tl-2017a-p':         'In our third year of college, the universe began weaving our story — from a simple exchange of messages, with an ordinary reason, yet quietly drawing us closer to each other.',
+      'tl-2017b-h':         'First Meeting at a Bazaar',
+      'tl-2017b-p':         'Our first meeting at a small bazaar was only the beginning, where laughter came easy and conversation flowed without pause. From that moment, we walked as friends — strengthening and keeping each other, in quiet and steady steps.',
+      'tl-2021-h':          'Reunited',
+      'tl-2021-p':          'Though briefly separated by distance and the busyness of life, this story never truly ended. We were brought back together — more mature, more ready — and this time, we chose to walk in the same direction.',
+      'tl-2026-h':          'Together, Forever',
+      'tl-2026-p':          'For more than five years we have walked side by side, cherishing what had long been there. Now, we decide to no longer walk alone — but together, forever.',
+      'events-title':       'Events',
+      'events-sub':         'With joy, we invite you to celebrate this moment with us',
+      'cd-days':            'Days',
+      'cd-hours':           'Hours',
+      'cd-minutes':         'Minutes',
+      'cd-seconds':         'Seconds',
+      'ev1-title':          'Holy Matrimony',
+      'ev1-date':           'Friday, 26 · 06 · 2026',
+      'ev2-title':          'Wedding Reception',
+      'ev2-date':           'Friday, 26 · 06 · 2026',
+      'map-btn':            'View on Map ↗',
+      'save-date-text':     'Mark the date so you don\'t miss it',
+      'save-date-btn':      'Save the Date',
+      'gallery-title':      'Our Moments',
+      'gallery-sub':        'A glimpse of our journey together',
+      'rsvp-title':         'RSVP',
+      'rsvp-sub':           'Please confirm your attendance before 1 · 06 · 2026',
+      'rsvp-ph-name':       'Your Full Name',
+      'rsvp-ph-phone':      'Phone Number',
+      'rsvp-opt-default':   'Will you be attending?',
+      'rsvp-opt-yes':       'Yes, I will attend',
+      'rsvp-opt-no':        'I\'m sorry, I cannot attend',
+      'rsvp-ph-guests':     'Number of Guests',
+      'rsvp-submit':        'Confirm Attendance',
+      'rsvp-success':       '✦ Thank you! Your attendance has been noted. ✦',
+      'gb-title':           'Prayers & Wishes',
+      'gb-sub':             'Share your prayers and congratulations for the couple',
+      'gb-ph-name':         'Your Name',
+      'gb-ph-msg':          'Write your prayers and wishes for Alan & Kris...',
+      'gb-submit':          'Send Wishes',
+      'amplop-sub':         'Your presence and prayers are the greatest gift to us.<br>For those who wish to give a blessing, we humbly<br>receive it through the following accounts.',
+      'env-label-to':       'To',
+      'env-label-from':     'from',
+      'env-hint':           '— tap to open —',
+      'env-content-label':  'Account Details',
+      'env-content-sub':    'Select bank to copy account number',
+      'bank-type':          'Individual Savings',
+      'rek-lbl-num':        'Account Number',
+      'rek-lbl-name':       'Account Name',
+      'copy-btn':           'Copy Account Number',
+      'toast-bca':          'BCA account number copied ✓',
+      'toast-mandiri':      'Mandiri account number copied ✓',
+      'qris-title':         'Or via QRIS',
+      'qris-note':          'Scan QRIS · Valid for all payment apps',
+      'close-env':          '— close envelope —',
+      'gift-note':          'Your presence and prayers<br>are the greatest and most beautiful gift to us.',
+      'closing-text':       'With hearts full of gratitude, we thank you for celebrating this sacred moment with us. Your presence is the greatest blessing to us.',
+      'closing-verse':      '"May the love and blessing of God be with us all"',
+      'closing-sub':        '— United in God\'s Grace —'
+    }
+  };
+
+  var currentLang = localStorage.getItem('lang') || 'id';
+
+  function applyLang(lang) {
+    var d = t[lang];
+    document.querySelectorAll('[data-i18n]').forEach(function(el) {
+      var key = el.getAttribute('data-i18n');
+      if (d[key] !== undefined) el.textContent = d[key];
+    });
+    document.querySelectorAll('[data-i18n-html]').forEach(function(el) {
+      var key = el.getAttribute('data-i18n-html');
+      if (d[key] !== undefined) el.innerHTML = d[key];
+    });
+    document.querySelectorAll('[data-i18n-ph]').forEach(function(el) {
+      var key = el.getAttribute('data-i18n-ph');
+      if (d[key] !== undefined) el.placeholder = d[key];
+    });
+    var btn = document.getElementById('langToggle');
+    if (btn) btn.textContent = lang === 'id' ? 'EN' : 'ID';
+    document.documentElement.lang = lang;
+    localStorage.setItem('lang', lang);
+    currentLang = lang;
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var btn = document.getElementById('langToggle');
+    if (btn) {
+      btn.addEventListener('click', function() {
+        applyLang(currentLang === 'id' ? 'en' : 'id');
+      });
+    }
+    applyLang(currentLang);
+  });
+})();
