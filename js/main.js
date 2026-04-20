@@ -370,6 +370,14 @@ function copyRek(nomor, toastId) {
   setTimeout(function() { toast.style.display = 'none'; }, 2500);
 }
 
+// ===== FLORAL CORNER FRAME =====
+(function() {
+  var frame = '<div class="floral-frame" aria-hidden="true"><i></i><i></i><i></i><i></i></div>';
+  document.querySelectorAll('section:not(#cover)').forEach(function(s) {
+    s.insertAdjacentHTML('afterbegin', frame);
+  });
+})();
+
 // ===== SMOOTH SCROLL FOR ANCHORS =====
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', (e) => {
