@@ -46,7 +46,7 @@
 
     <div class="guest-label" id="guestLabel">
       <span class="guest-to">Kepada Yth.</span>
-      <span class="guest-name" id="guestName">Bapak/Ibu/Saudara/i</span>
+      <span class="guest-name" id="guestName">Tamu Undangan</span>
     </div>
 
     <button class="open-btn" id="openBtn">Buka Undangan</button>
@@ -74,6 +74,52 @@
       <p class="hero-date">Jumat, 26 Juni 2026</p>
       <div class="scroll-hint">
         <span>↓</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROFIL PASANGAN -->
+  <section id="profil" class="section-padded dark-section">
+    <div class="section-content">
+      <div class="cross-small fade-in">✞</div>
+      <h3 class="section-title fade-in">Mempelai</h3>
+      <p class="section-sub fade-in">Yang berbahagia dipersatukan dalam anugerah-Nya</p>
+      <div class="profil-grid">
+
+        <!-- Pria -->
+        <div class="profil-card fade-in">
+          <div class="profil-photo-wrap">
+            <img src="assets/groom.svg" alt="Alan Saputra Lengkoan" onerror="this.style.display='none'">
+            <div class="profil-photo-fallback">A</div>
+          </div>
+          <div class="profil-role">Mempelai Pria</div>
+          <h3 class="profil-name">Alan Saputra Lengkoan</h3>
+          <div class="profil-divider"></div>
+          <p class="profil-parents">Putra dari</p>
+          <p class="profil-parents-name">Bapak [Nama Ayah] &amp; Ibu [Nama Ibu]</p>
+          <a href="https://instagram.com/alan_lengkoan" target="_blank" class="profil-ig">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+            @alan_lengkoan
+          </a>
+        </div>
+
+        <!-- Wanita -->
+        <div class="profil-card fade-in">
+          <div class="profil-photo-wrap">
+            <img src="assets/bride.svg" alt="Kris Daniel" onerror="this.style.display='none'">
+            <div class="profil-photo-fallback">K</div>
+          </div>
+          <div class="profil-role">Mempelai Wanita</div>
+          <h3 class="profil-name">Kris Daniel</h3>
+          <div class="profil-divider"></div>
+          <p class="profil-parents">Putri dari</p>
+          <p class="profil-parents-name">Bapak [Nama Ayah] &amp; Ibu [Nama Ibu]</p>
+          <a href="https://instagram.com/kris_daniel" target="_blank" class="profil-ig">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+            @kris_daniel
+          </a>
+        </div>
+
       </div>
     </div>
   </section>
@@ -160,6 +206,15 @@
           <p class="event-address">Jl. Glory No. 456, Jakarta Selatan</p>
           <a href="https://maps.google.com" target="_blank" class="map-btn">Lihat di Peta ↗</a>
         </div>
+      </div>
+      <div class="save-date-wrap fade-in">
+        <p class="save-date-text">Tandai harinya agar tidak terlewat</p>
+        <a class="save-date-btn"
+          href="https://calendar.google.com/calendar/r/eventedit?text=The+Wedding+of+Alan+%26+Kris&dates=20260626T020000Z/20260626T080000Z&details=Pemberkatan+Nikah+%26+Resepsi+Pernikahan+Alan+%26+Kris&location=Grace+Cathedral+Church"
+          target="_blank">
+          <svg viewBox="0 0 20 20" fill="none"><rect x="2" y="3" width="16" height="15" rx="2" stroke="currentColor" stroke-width="1.2"/><path d="M2 8H18" stroke="currentColor" stroke-width="1.2"/><path d="M6 1V4M14 1V4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+          Simpan Tanggal
+        </a>
       </div>
     </div>
   </section>
@@ -252,7 +307,7 @@
           <!-- Closed state -->
           <div class="env-front" id="envFront">
             <div class="env-label">Kepada Yth.</div>
-            <div class="env-name">Tamu Undangan</div>
+            <div class="env-name" id="envGuestName">Tamu Undangan</div>
             <div class="env-separator"></div>
             <div class="env-label" style="margin-bottom:6px;">dari</div>
             <div class="env-from">Alan &amp; Kris</div>

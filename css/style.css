@@ -29,7 +29,12 @@ body {
   color: var(--white);
   font-family: var(--font-serif);
   overflow-x: hidden;
+  overflow-y: hidden;
   line-height: 1.7;
+}
+
+body.scroll-unlocked {
+  overflow-y: auto;
 }
 
 img { max-width: 100%; display: block; }
@@ -369,6 +374,168 @@ a { text-decoration: none; }
   color: var(--text-muted);
   margin-bottom: 3.5rem;
   font-size: 1.05rem;
+}
+
+/* ===== PROFIL PASANGAN ===== */
+#profil { background: var(--dark2); }
+
+.profil-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  margin-top: 1rem;
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.profil-card {
+  text-align: center;
+  padding: 2.5rem 1.5rem;
+  border: 1px solid rgba(201,168,76,0.15);
+  background: rgba(201,168,76,0.02);
+  position: relative;
+  transition: border-color 0.4s, box-shadow 0.4s;
+}
+
+.profil-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(to right, transparent, var(--gold), transparent);
+}
+
+.profil-card:hover {
+  border-color: rgba(201,168,76,0.35);
+  box-shadow: 0 12px 40px rgba(201,168,76,0.06);
+}
+
+.profil-photo-wrap {
+  width: 110px;
+  height: 110px;
+  margin: 0 auto 1.2rem;
+  border-radius: 50%;
+  border: 1px solid rgba(201,168,76,0.4);
+  overflow: hidden;
+  position: relative;
+  background: rgba(201,168,76,0.05);
+}
+
+.profil-photo-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profil-photo-fallback {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  font-style: italic;
+  color: rgba(201,168,76,0.4);
+  font-family: var(--font-serif);
+}
+
+.profil-role {
+  font-size: 0.68rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: rgba(201,168,76,0.5);
+  margin-bottom: 0.5rem;
+}
+
+.profil-name {
+  font-size: 1.3rem;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--gold-lighter);
+  letter-spacing: 0.03em;
+  margin-bottom: 0;
+}
+
+.profil-divider {
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--gold), transparent);
+  margin: 1rem auto;
+}
+
+.profil-parents {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-style: italic;
+  margin-bottom: 0.3rem;
+}
+
+.profil-parents-name {
+  font-size: 0.9rem;
+  color: var(--off-white);
+  font-style: italic;
+  margin-bottom: 1.2rem;
+  line-height: 1.6;
+}
+
+.profil-ig {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  color: var(--gold);
+  border: 1px solid rgba(201,168,76,0.3);
+  padding: 0.4rem 1rem;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  transition: var(--transition);
+}
+
+.profil-ig svg { width: 14px; height: 14px; }
+
+.profil-ig:hover {
+  background: rgba(201,168,76,0.08);
+  border-color: var(--gold);
+}
+
+/* ===== SAVE THE DATE ===== */
+.save-date-wrap {
+  text-align: center;
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(201,168,76,0.1);
+}
+
+.save-date-text {
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+  letter-spacing: 0.05em;
+}
+
+.save-date-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.8rem 2rem;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  font-family: var(--font-serif);
+  font-size: 0.85rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: var(--transition);
+  background: transparent;
+}
+
+.save-date-btn svg { width: 16px; height: 16px; }
+
+.save-date-btn:hover {
+  background: rgba(201,168,76,0.1);
+  box-shadow: 0 0 20px rgba(201,168,76,0.1);
 }
 
 /* ===== BIBLE VERSE SECTION ===== */

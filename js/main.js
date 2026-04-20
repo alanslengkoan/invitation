@@ -5,11 +5,11 @@
 
 // ===== GUEST NAME FROM URL PARAMETER =====
 (function() {
-  var params   = new URLSearchParams(window.location.search);
-  var guestTo  = params.get('to');
-  if (guestTo) {
-    document.getElementById('guestName').textContent = decodeURIComponent(guestTo);
-  }
+  var params  = new URLSearchParams(window.location.search);
+  var guestTo = params.get('to');
+  var name = (guestTo && guestTo.trim()) ? decodeURIComponent(guestTo.trim()) : 'Tamu Undangan';
+  document.getElementById('guestName').textContent    = name;
+  document.getElementById('envGuestName').textContent = name;
 })();
 
 // ===== COUNTDOWN TIMER =====
@@ -121,6 +121,7 @@ const cover = document.getElementById('cover');
 const mainContent = document.getElementById('mainContent');
 
 openBtn.addEventListener('click', () => {
+  document.body.classList.add('scroll-unlocked');
   cover.classList.add('fade-out');
 
   mainContent.classList.remove('hidden');
