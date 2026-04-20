@@ -431,6 +431,32 @@ function copyRek(nomor, toastId) {
   });
 })();
 
+// ===== FLOATING NAV — ACTIVE SECTION =====
+(function() {
+  var navIds = ['hero', 'profil', 'love-story', 'events', 'gallery', 'gift'];
+  var navMap  = {};
+  navIds.forEach(function(id) {
+    var el = document.querySelector('.fn-item[href="#' + id + '"]');
+    if (el) navMap[id] = el;
+  });
+
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      var id = entry.target.id;
+      if (!navMap[id]) return;
+      if (entry.isIntersecting) {
+        Object.values(navMap).forEach(function(i) { i.classList.remove('active'); });
+        navMap[id].classList.add('active');
+      }
+    });
+  }, { threshold: 0.35 });
+
+  navIds.forEach(function(id) {
+    var sec = document.getElementById(id);
+    if (sec) observer.observe(sec);
+  });
+})();
+
 // ===== SMOOTH SCROLL FOR ANCHORS =====
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', (e) => {
