@@ -230,7 +230,6 @@ function tryPlayMusic() {
   audio.play()
     .then(() => {
       isPlaying = true;
-      musicBtn.textContent = '♫';
       musicBtn.classList.add('playing');
       fadeAudioIn();
     })
@@ -265,7 +264,6 @@ musicBtn.addEventListener('click', () => {
     fadeAudioOut(() => {
       audio.pause();
       isPlaying = false;
-      musicBtn.textContent = '♪';
       musicBtn.classList.remove('playing');
     });
   } else {
@@ -274,7 +272,6 @@ musicBtn.addEventListener('click', () => {
       audio.play()
         .then(() => {
           isPlaying = true;
-          musicBtn.textContent = '♫';
           musicBtn.classList.add('playing');
           fadeAudioIn();
         })

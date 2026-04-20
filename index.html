@@ -32,28 +32,6 @@
       <p class="verse-text">"Kasih itu sabar; kasih itu murah hati; ia tidak cemburu. Kasih tidak memegahkan diri dan tidak sombong. Ia tidak melakukan yang tidak sopan dan tidak mencari keuntungan diri sendiri."</p>
       <p class="verse-ref">— 1 Korintus 13:4–5</p>
     </div>
-    <div class="countdown">
-      <div class="count-box">
-        <div class="count-num" id="cdDays">00</div>
-        <div class="count-label">Hari</div>
-      </div>
-      <div class="count-sep">·</div>
-      <div class="count-box">
-        <div class="count-num" id="cdHours">00</div>
-        <div class="count-label">Jam</div>
-      </div>
-      <div class="count-sep">·</div>
-      <div class="count-box">
-        <div class="count-num" id="cdMinutes">00</div>
-        <div class="count-label">Menit</div>
-      </div>
-      <div class="count-sep">·</div>
-      <div class="count-box">
-        <div class="count-num" id="cdSeconds">00</div>
-        <div class="count-label">Detik</div>
-      </div>
-    </div>
-
     <div class="guest-label" id="guestLabel">
       <span class="guest-to">Kepada Yth.</span>
       <span class="guest-name" id="guestName">Tamu Undangan</span>
@@ -82,6 +60,27 @@
       </div>
       <h2 class="hero-name">Kris Daniel</h2>
       <p class="hero-date">Jumat, 26 Juni 2026</p>
+      <div class="countdown">
+        <div class="count-box">
+          <div class="count-num" id="cdDays">00</div>
+          <div class="count-label">Hari</div>
+        </div>
+        <div class="count-sep">·</div>
+        <div class="count-box">
+          <div class="count-num" id="cdHours">00</div>
+          <div class="count-label">Jam</div>
+        </div>
+        <div class="count-sep">·</div>
+        <div class="count-box">
+          <div class="count-num" id="cdMinutes">00</div>
+          <div class="count-label">Menit</div>
+        </div>
+        <div class="count-sep">·</div>
+        <div class="count-box">
+          <div class="count-num" id="cdSeconds">00</div>
+          <div class="count-label">Detik</div>
+        </div>
+      </div>
       <div class="scroll-hint">
         <span>↓</span>
       </div>
@@ -481,15 +480,15 @@
   <a href="#gift" class="fn-item">
     <svg viewBox="0 0 24 24"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 010-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 000-5C13 2 12 7 12 7z"/></svg>
   </a>
+  <span class="fn-sep"></span>
+  <button class="fn-item" id="musicToggle" title="Musik">
+    <svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+  </button>
 </nav>
 
-<!-- MUSIC PLAYER -->
-<div class="music-player" id="musicPlayer">
-  <button class="music-btn" id="musicToggle" title="Toggle Music">♪</button>
-  <audio id="bgMusic" loop preload="none">
-    <source src="assets/music.mp3" type="audio/mpeg">
-  </audio>
-</div>
+<audio id="bgMusic" loop preload="none">
+  <source src="assets/music.mp3" type="audio/mpeg">
+</audio>
 
 <script src="js/main.js"></script>
 </body>
