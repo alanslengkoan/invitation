@@ -106,14 +106,17 @@ a { text-decoration: none; }
 .couple-names {
   font-size: clamp(3rem, 9vw, 5.5rem);
   font-weight: 300;
-  color: var(--white);
   line-height: 1.05;
   letter-spacing: 0.02em;
-  text-shadow: 0 4px 30px rgba(201,168,76,0.25);
+  background: linear-gradient(90deg, #c9a84c 0%, #f0d78a 25%, #fff8e7 48%, #f0d78a 72%, #c9a84c 100%);
+  background-size: 250% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmerText 6s linear infinite;
 }
 
 .amp {
-  color: var(--gold);
   font-style: italic;
   font-weight: 300;
 }
@@ -308,9 +311,15 @@ a { text-decoration: none; }
 .hero-name {
   font-size: clamp(2.2rem, 6vw, 4.5rem);
   font-weight: 300;
-  color: var(--white);
   line-height: 1.15;
   letter-spacing: 0.03em;
+  background: linear-gradient(90deg, #c9a84c 0%, #f0d78a 25%, #fff8e7 48%, #f0d78a 72%, #c9a84c 100%);
+  background-size: 250% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmerText 6s linear infinite;
+  animation-delay: -3s;
 }
 
 .gold-ornament {
@@ -1414,6 +1423,108 @@ blockquote cite {
 @keyframes fadeSlideIn {
   from { opacity: 0; transform: translateY(12px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== PRELOADER ===== */
+#preloader {
+  position: fixed;
+  inset: 0;
+  background: #000;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.9s ease, visibility 0.9s ease;
+}
+
+#preloader.hide {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.pre-inner {
+  text-align: center;
+  animation: fadeSlideIn 0.9s ease forwards;
+}
+
+.pre-cross {
+  font-size: 1.4rem;
+  color: var(--gold);
+  margin-bottom: 1.8rem;
+  animation: crossGlow 2.2s ease-in-out infinite;
+  display: block;
+}
+
+@keyframes crossGlow {
+  0%, 100% { text-shadow: 0 0 8px rgba(201,168,76,0.3); }
+  50%       { text-shadow: 0 0 30px rgba(201,168,76,0.8), 0 0 60px rgba(201,168,76,0.3); }
+}
+
+.pre-names {
+  font-family: var(--font-serif);
+  font-size: clamp(2.2rem, 7vw, 3.8rem);
+  font-weight: 300;
+  font-style: italic;
+  letter-spacing: 0.08em;
+  background: linear-gradient(90deg, #c9a84c 0%, #f0d78a 25%, #fff8e7 48%, #f0d78a 72%, #c9a84c 100%);
+  background-size: 250% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmerText 3s linear infinite;
+  margin-bottom: 0.6rem;
+}
+
+.pre-names span { font-style: normal; }
+
+.pre-date {
+  font-size: 0.72rem;
+  letter-spacing: 0.5em;
+  color: rgba(201,168,76,0.35);
+  margin-bottom: 2.8rem;
+}
+
+.pre-bar {
+  width: 160px;
+  height: 1px;
+  background: rgba(201,168,76,0.12);
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.pre-progress {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(to right, transparent, var(--gold), transparent);
+  animation: loadBar 1.8s ease-in-out forwards;
+}
+
+@keyframes shimmerText {
+  0%   { background-position: -200% center; }
+  100% { background-position:  200% center; }
+}
+
+@keyframes loadBar {
+  from { width: 0; }
+  to   { width: 100%; }
+}
+
+/* ===== PETAL PARTICLES ===== */
+.petal {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+  border-radius: 150% 0 150% 0;
+  animation: petalFall linear infinite;
+  top: -30px;
+}
+
+@keyframes petalFall {
+  0%   { transform: translateY(0)     rotate(0deg)   translateX(0);    opacity: 0; }
+  8%   { opacity: 1; }
+  85%  { opacity: 0.7; }
+  100% { transform: translateY(108vh) rotate(500deg) translateX(70px); opacity: 0; }
 }
 
 /* ===== FLORAL CORNER FRAME ===== */

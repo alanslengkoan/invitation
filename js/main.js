@@ -7,6 +7,59 @@
 if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
 window.scrollTo(0, 0);
 
+// ===== PRELOADER =====
+(function() {
+  var pre = document.getElementById('preloader');
+  var minTime = 2000;
+  var start   = Date.now();
+  function hidePreloader() {
+    var elapsed = Date.now() - start;
+    var delay   = Math.max(0, minTime - elapsed);
+    setTimeout(function() {
+      pre.classList.add('hide');
+      setTimeout(function() { pre.style.display = 'none'; }, 900);
+    }, delay);
+  }
+  if (document.readyState === 'complete') {
+    hidePreloader();
+  } else {
+    window.addEventListener('load', hidePreloader);
+  }
+})();
+
+// ===== PETAL PARTICLES =====
+(function() {
+  var cover = document.getElementById('cover');
+  var petalCount = 14;
+  for (var i = 0; i < petalCount; i++) {
+    var p = document.createElement('div');
+    p.className = 'petal';
+    var w = 6 + Math.random() * 8;
+    p.style.cssText =
+      'left:'                + (3 + Math.random() * 94) + '%;' +
+      'width:'               + w + 'px;' +
+      'height:'              + (w * 1.4) + 'px;' +
+      'background:rgba('     + (Math.random() > 0.5 ? '201,168,76' : '255,248,220') + ',' + (0.18 + Math.random() * 0.22) + ');' +
+      'animation-delay:'     + (Math.random() * 10) + 's;' +
+      'animation-duration:'  + (7 + Math.random() * 7) + 's;';
+    cover.appendChild(p);
+  }
+})();
+
+// ===== HERO PARALLAX =====
+(function() {
+  var heroImg = document.querySelector('.hero-photo img');
+  if (!heroImg) return;
+  var heroSection = document.getElementById('hero');
+  function onScroll() {
+    var rect   = heroSection.getBoundingClientRect();
+    var inView = rect.bottom > 0 && rect.top < window.innerHeight;
+    if (!inView) return;
+    heroImg.style.transform = 'translateY(' + (rect.top * 0.25) + 'px)';
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+})();
+
 // ===== GUEST NAME FROM URL PARAMETER =====
 (function() {
   var params  = new URLSearchParams(window.location.search);
