@@ -1,496 +1,611 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Undangan Pernikahan — Alan & Kris</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Pernikahan — Alan & Kris</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-<!-- ===== PRELOADER ===== -->
-<div id="preloader">
-  <div class="pre-inner">
-    <div class="pre-names">Alan <span>&amp;</span> Kris</div>
-    <div class="pre-date">26 · 06 · 2026</div>
-    <div class="pre-bar"><div class="pre-progress"></div></div>
-  </div>
-</div>
-
-<!-- ===== COVER / OPENING ===== -->
-<section id="cover">
-  <canvas id="particles"></canvas>
-  <div class="cover-bg">
-    <img src="assets/hero.jpg" alt="Alan &amp; Kris">
-  </div>
-  <div class="cover-gradient"></div>
-  <div class="cover-content">
-    <div class="cover-title-area">
-      <p class="wedding-label">The Wedding of</p>
-      <h1 class="couple-names">Alan<span class="amp"> &amp; </span>Kris</h1>
+    <!-- ===== PRELOADER ===== -->
+    <div id="preloader">
+        <div class="pre-inner">
+            <div class="pre-names">Alan <span>&amp;</span> Kris</div>
+            <div class="pre-date">26 · 06 · 2026</div>
+            <div class="pre-bar">
+                <div class="pre-progress"></div>
+            </div>
+        </div>
     </div>
-    <div class="cover-footer">
-      <div class="guest-label" id="guestLabel">
-        <span class="guest-to">Dear,</span>
-        <span class="guest-name" id="guestName">Tamu Undangan</span>
-      </div>
-      <button class="open-btn" id="openBtn" data-i18n="open-btn">Buka Undangan</button>
+
+    <!-- ===== COVER / OPENING ===== -->
+    <section id="cover">
+        <canvas id="particles"></canvas>
+        <div class="cover-bg">
+            <img src="assets/cover/hero.jpg" alt="Alan &amp; Kris">
+        </div>
+        <div class="cover-gradient"></div>
+        <div class="cover-content">
+            <div class="cover-title-area">
+                <p class="wedding-label">The Wedding of</p>
+                <h1 class="couple-names">Alan<span class="amp"> &amp; </span>Kris</h1>
+            </div>
+            <div class="cover-footer">
+                <div class="guest-label" id="guestLabel">
+                    <span class="guest-to">Dear,</span>
+                    <span class="guest-name" id="guestName">Tamu Undangan</span>
+                </div>
+                <button class="open-btn" id="openBtn" data-i18n="open-btn">Buka Undangan</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main id="mainContent">
+
+        <!-- HERO -->
+        <section id="hero">
+            <div class="hero-slider">
+                <div class="hero-slide active">
+                    <img src="assets/hero/slide1.JPG" alt="Alan &amp; Kris" onerror="this.style.display='none'">
+                </div>
+                <div class="hero-slide">
+                    <img src="assets/hero/slide2.JPG" alt="Alan &amp; Kris" onerror="this.style.display='none'">
+                </div>
+                <div class="hero-slide">
+                    <img src="assets/hero/slide3.jpg" alt="Alan &amp; Kris" onerror="this.style.display='none'">
+                </div>
+                <div class="hero-dots">
+                    <span class="hero-dot active"></span>
+                    <span class="hero-dot"></span>
+                    <span class="hero-dot"></span>
+                </div>
+            </div>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <p class="grace-text" data-i18n="grace-text">Dengan anugerah Tuhan, kami dipersatukan dalam ikatan suci
+                    pernikahan</p>
+                <h2 class="hero-name">Alan Saputra Lengkoan</h2>
+                <div class="gold-ornament">
+                    <span class="ornament-line"></span>
+                    <span class="ornament-line"></span>
+                </div>
+                <h2 class="hero-name">Kris Daniel</h2>
+                <p class="hero-date">26 · 06 · 2026</p>
+                <div class="scroll-hint">
+                    <span>↓</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROFIL PASANGAN -->
+        <section id="profil" class="section-padded dark-section">
+            <div class="section-content">
+                <h3 class="section-title fade-in" data-i18n="profil-title">Mempelai</h3>
+                <p class="section-sub fade-in" data-i18n="profil-sub">Yang berbahagia dipersatukan dalam anugerah-Nya
+                </p>
+                <div class="profil-grid">
+
+                    <!-- Pria -->
+                    <div class="profil-card fade-in">
+                        <div class="profil-photo-wrap">
+                            <img src="assets/profil/groom.svg" alt="Alan Saputra Lengkoan"
+                                onerror="this.style.display='none'">
+                            <div class="profil-photo-fallback">A</div>
+                        </div>
+                        <div class="profil-role" data-i18n="role-groom">Mempelai Pria</div>
+                        <h3 class="profil-name">Alan Saputra Lengkoan</h3>
+                        <div class="profil-divider"></div>
+                        <p class="profil-parents" data-i18n="parents-groom">Putra dari</p>
+                        <p class="profil-parents-name"><span data-i18n="title-mr">Bapak</span> Marnex Lengkoan &amp; <span data-i18n="title-mrs">Ibu</span> Limbong Minanga</p>
+                        <a href="https://instagram.com/alanslengkoan" target="_blank" class="profil-ig">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor"
+                                    stroke-width="1.5" />
+                                <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5" />
+                                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" /></svg>
+                            @alanslengkoan
+                        </a>
+                    </div>
+
+                    <!-- Wanita -->
+                    <div class="profil-card fade-in">
+                        <div class="profil-photo-wrap">
+                            <img src="assets/profil/bride.svg" alt="Kris Daniel" onerror="this.style.display='none'">
+                            <div class="profil-photo-fallback">K</div>
+                        </div>
+                        <div class="profil-role" data-i18n="role-bride">Mempelai Wanita</div>
+                        <h3 class="profil-name">Kris Daniel</h3>
+                        <div class="profil-divider"></div>
+                        <p class="profil-parents" data-i18n="parents-bride">Putri dari</p>
+                        <p class="profil-parents-name"><span data-i18n="title-mr">Bapak</span> Daniel Tadan &amp; <span data-i18n="title-mrs">Ibu</span> Yuliana Ere</p>
+                        <a href="https://instagram.com/krisdanielll" target="_blank" class="profil-ig">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor"
+                                    stroke-width="1.5" />
+                                <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5" />
+                                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" /></svg>
+                            @krisdanielll
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- BIBLE VERSE -->
+        <section id="bible-verse" class="section-padded">
+            <div class="glow-bg"></div>
+            <div class="stained-glass-left"></div>
+            <div class="stained-glass-right"></div>
+            <div class="section-content fade-in">
+                <blockquote>
+                    <p class="verse-main" data-i18n-html="verse-main">"Demikianlah tinggal ketiga hal ini, yaitu iman,
+                        pengharapan dan kasih,<br>dan yang paling besar di antaranya ialah kasih."</p>
+                    <cite data-i18n="verse-cite">— 1 Korintus 13:13</cite>
+                </blockquote>
+            </div>
+        </section>
+
+        <!-- LOVE STORY -->
+        <section id="love-story" class="section-padded dark-section">
+            <div class="section-content">
+                <h3 class="section-title fade-in" data-i18n="ls-title">Kisah Cinta Kami</h3>
+                <p class="section-sub fade-in" data-i18n="ls-sub">Sembilan tahun semesta merajut cerita ini</p>
+                <div class="timeline">
+                    <div class="timeline-item fade-in">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-year">2017</div>
+                        <div class="timeline-body">
+                            <h4 data-i18n="tl-2017a-h">Berawal dari Percakapan Sederhana</h4>
+                            <p data-i18n="tl-2017a-p">Di tahun ketiga perkuliahan, semesta mulai merajut cerita kami —
+                                dari percakapan sederhana di layar, dengan alasan yang terdengar biasa, namun perlahan
+                                membawa kami saling mengenal.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item fade-in">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-year">2017</div>
+                        <div class="timeline-body">
+                            <h4 data-i18n="tl-2017b-h">Pertemuan Pertama di Bazar</h4>
+                            <p data-i18n="tl-2017b-p">Pertemuan pertama di sebuah bazar kecil menjadi awal, di mana tawa
+                                terasa ringan dan percakapan mengalir tanpa jeda. Sejak saat itu, kami berjalan sebagai
+                                sahabat — saling menguatkan, saling menjaga, dalam langkah yang tenang dan sederhana.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="timeline-item fade-in">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-year">2021</div>
+                        <div class="timeline-body">
+                            <h4 data-i18n="tl-2021-h">Dipertemukan Kembali</h4>
+                            <p data-i18n="tl-2021-p">Meski sempat terpisah oleh jarak dan kesibukan, cerita ini tidak
+                                benar-benar usai. Kami dipertemukan kembali dalam versi yang lebih dewasa, lebih siap —
+                                dan kali ini, kami memilih untuk berjalan ke arah yang sama.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item fade-in">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-year">2026</div>
+                        <div class="timeline-body">
+                            <h4 data-i18n="tl-2026-h">Bersama, Selamanya</h4>
+                            <p data-i18n="tl-2026-p">Lebih dari lima tahun kami berjalan berdampingan, menjaga apa yang
+                                sudah lama ada. Kini, kami memutuskan untuk tidak lagi berjalan sendiri — melainkan
+                                bersama, selamanya.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EVENT DETAILS -->
+        <section id="events" class="section-padded">
+            <div class="section-content">
+                <h3 class="section-title fade-in" data-i18n="events-title">Rangkaian Acara</h3>
+                <p class="section-sub fade-in" data-i18n="events-sub">Dengan sukacita kami mengundang Anda untuk
+                    merayakan bersama kami</p>
+                <div class="countdown fade-in">
+                    <div class="count-box">
+                        <div class="count-num" id="cdDays">00</div>
+                        <div class="count-label" data-i18n="cd-days">Hari</div>
+                    </div>
+                    <div class="count-sep">·</div>
+                    <div class="count-box">
+                        <div class="count-num" id="cdHours">00</div>
+                        <div class="count-label" data-i18n="cd-hours">Jam</div>
+                    </div>
+                    <div class="count-sep">·</div>
+                    <div class="count-box">
+                        <div class="count-num" id="cdMinutes">00</div>
+                        <div class="count-label" data-i18n="cd-minutes">Menit</div>
+                    </div>
+                    <div class="count-sep">·</div>
+                    <div class="count-box">
+                        <div class="count-num" id="cdSeconds">00</div>
+                        <div class="count-label" data-i18n="cd-seconds">Detik</div>
+                    </div>
+                </div>
+                <div class="events-grid">
+                    <div class="event-card fade-in">
+                        <h4 data-i18n="ev1-title">Pemberkatan Nikah</h4>
+                        <div class="event-divider"></div>
+                        <p class="event-detail"><span>📅</span> <span data-i18n="ev1-date">Jumat, 26 · 06 · 2026</span>
+                        </p>
+                        <p class="event-detail"><span>🕘</span> 09.00 – 11.00 WITA</p>
+                        <p class="event-venue">Grace Cathedral Church</p>
+                        <p class="event-address">Jl. Blessing No. 123, Jakarta Pusat</p>
+                        <a href="https://maps.google.com" target="_blank" class="map-btn" data-i18n="map-btn">Lihat di
+                            Peta ↗</a>
+                    </div>
+                    <div class="event-card fade-in">
+                        <h4 data-i18n="ev2-title">Resepsi Pernikahan</h4>
+                        <div class="event-divider"></div>
+                        <p class="event-detail"><span>📅</span> <span data-i18n="ev2-date">Jumat, 26 · 06 · 2026</span>
+                        </p>
+                        <p class="event-detail"><span>🕛</span> 12.00 – 15.00 WITA</p>
+                        <p class="event-venue">The Grand Ballroom</p>
+                        <p class="event-address">Jl. Glory No. 456, Jakarta Selatan</p>
+                        <a href="https://maps.google.com" target="_blank" class="map-btn" data-i18n="map-btn">Lihat di
+                            Peta ↗</a>
+                    </div>
+                </div>
+                <div class="save-date-wrap fade-in">
+                    <p class="save-date-text" data-i18n="save-date-text">Tandai harinya agar tidak terlewat</p>
+                    <a class="save-date-btn"
+                        href="https://calendar.google.com/calendar/r/eventedit?text=The+Wedding+of+Alan+%26+Kris&dates=20260626T020000Z/20260626T080000Z&details=Pemberkatan+Nikah+%26+Resepsi+Pernikahan+Alan+%26+Kris&location=Grace+Cathedral+Church"
+                        target="_blank">
+                        <svg viewBox="0 0 20 20" fill="none">
+                            <rect x="2" y="3" width="16" height="15" rx="2" stroke="currentColor" stroke-width="1.2" />
+                            <path d="M2 8H18" stroke="currentColor" stroke-width="1.2" />
+                            <path d="M6 1V4M14 1V4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" />
+                        </svg>
+                        <span data-i18n="save-date-btn">Simpan Tanggal</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- GALLERY -->
+        <section id="gallery" class="section-padded dark-section">
+            <div class="section-content">
+                <h3 class="section-title fade-in" data-i18n="gallery-title">Momen Kami</h3>
+                <p class="section-sub fade-in" data-i18n="gallery-sub">Sekilas perjalanan cinta kami bersama</p>
+                <div class="gallery-grid">
+                    <div class="gallery-item fade-in" data-index="0"><img src="assets/gallery/photo1.svg" alt="Momen 1"
+                            onerror="this.parentElement.classList.add('no-img')"></div>
+                    <div class="gallery-item gallery-tall fade-in" data-index="1"><img src="assets/gallery/photo2.svg"
+                            alt="Momen 2" onerror="this.parentElement.classList.add('no-img')"></div>
+                    <div class="gallery-item fade-in" data-index="2"><img src="assets/gallery/photo3.svg" alt="Momen 3"
+                            onerror="this.parentElement.classList.add('no-img')"></div>
+                    <div class="gallery-item fade-in" data-index="3"><img src="assets/gallery/photo4.svg" alt="Momen 4"
+                            onerror="this.parentElement.classList.add('no-img')"></div>
+                    <div class="gallery-item gallery-wide fade-in" data-index="4"><img src="assets/gallery/photo5.svg"
+                            alt="Momen 5" onerror="this.parentElement.classList.add('no-img')"></div>
+                    <div class="gallery-item fade-in" data-index="5"><img src="assets/gallery/photo6.svg" alt="Momen 6"
+                            onerror="this.parentElement.classList.add('no-img')"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- RSVP & GUESTBOOK -->
+        <section id="rsvp" class="section-padded">
+            <div class="section-content">
+                <h3 class="section-title fade-in" data-i18n="rsvp-title">Konfirmasi Kehadiran</h3>
+                <p class="section-sub fade-in" data-i18n="rsvp-sub">Mohon konfirmasi kehadiran Anda sebelum 1 · 06 ·
+                    2026</p>
+                <form class="rsvp-form fade-in" id="rsvpForm">
+                    <div class="form-group">
+                        <input type="text" placeholder="Nama Lengkap Anda" data-i18n-ph="rsvp-ph-name" required>
+                    </div>
+                    <div class="form-group">
+                        <select required>
+                            <option value="" data-i18n="rsvp-opt-default">Apakah Anda akan hadir?</option>
+                            <option value="yes" data-i18n="rsvp-opt-yes">Ya, saya akan hadir</option>
+                            <option value="no" data-i18n="rsvp-opt-no">Mohon maaf, saya tidak dapat hadir</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input type="number" placeholder="Jumlah Tamu" data-i18n-ph="rsvp-ph-guests" min="0" max="5">
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Tuliskan doa dan ucapan selamat untuk Alan &amp; Kris..."
+                            data-i18n-ph="gb-ph-msg" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn" id="rsvpSubmit" data-i18n="rsvp-submit">Konfirmasi
+                        Kehadiran</button>
+                </form>
+                <p class="form-success hidden" id="rsvpSuccess" data-i18n="rsvp-success">✦ Terima kasih! Kehadiran Anda
+                    telah kami catat. ✦</p>
+                <div class="wishes-list" id="wishesList"></div>
+            </div>
+        </section>
+
+        <!-- DIGITAL ENVELOPE -->
+        <section id="gift" class="section-padded">
+            <div class="section-content">
+                <h3 class="section-title fade-in">Digital Gift</h3>
+                <div class="amplop-sub fade-in" data-i18n-html="amplop-sub">Doa dan kehadiran Anda adalah hadiah
+                    terbesar bagi kami.<br>Bagi yang ingin memberikan berkat, kami dengan rendah hati<br>menerima
+                    melalui rekening berikut.</div>
+
+                <!-- Animated Envelope -->
+                <div class="envelope-wrap fade-in" id="envWrap">
+                    <div class="env-body">
+
+                        <!-- Flap SVG -->
+                        <svg id="envFlap" class="env-flap" width="100%" viewBox="0 0 520 130"
+                            preserveAspectRatio="none">
+                            <rect width="520" height="130" fill="none" />
+                            <path d="M0 0 L260 96 L520 0 Z" fill="#2a0012" stroke="#c9a84c55" stroke-width="0.8" />
+                            <line x1="0" y1="0" x2="260" y2="96" stroke="#c9a84c22" stroke-width="0.5" />
+                            <line x1="520" y1="0" x2="260" y2="96" stroke="#c9a84c22" stroke-width="0.5" />
+                            <circle cx="260" cy="56" r="22" fill="#1e000e" stroke="#c9a84c" stroke-width="1" />
+                            <circle cx="260" cy="56" r="14" fill="none" stroke="#c9a84c44" stroke-width="0.5" />
+                            <text x="260" y="62" text-anchor="middle" font-size="8" fill="#c9a84c88"
+                                font-family="Georgia,serif" font-style="italic">A &amp; K</text>
+                        </svg>
+
+                        <!-- Closed state -->
+                        <div class="env-front" id="envFront">
+                            <div class="env-label" data-i18n="env-label-to">Kepada Yth.</div>
+                            <div class="env-name" id="envGuestName">Tamu Undangan</div>
+                            <div class="env-separator"></div>
+                            <div class="env-label" style="margin-bottom:6px;" data-i18n="env-label-from">dari</div>
+                            <div class="env-from">Alan &amp; Kris</div>
+                            <div class="env-hint" data-i18n="env-hint">— ketuk untuk membuka —</div>
+                        </div>
+
+                        <!-- Open state -->
+                        <div class="env-content" id="envContent">
+
+                            <div class="env-content-title">
+                                <div class="env-content-label" data-i18n="env-content-label">Nomor Rekening</div>
+                                <p class="env-content-sub" data-i18n="env-content-sub">Pilih bank untuk menyalin nomor
+                                    rekening</p>
+                            </div>
+
+                            <!-- BCA -->
+                            <div class="rek-card">
+                                <div class="rek-header">
+                                    <div class="bank-logo bank-bca">BCA</div>
+                                    <div>
+                                        <div class="bank-name">Bank BCA</div>
+                                        <div class="bank-type" data-i18n="bank-type">Tabungan Individu</div>
+                                    </div>
+                                </div>
+                                <div class="rek-row">
+                                    <div class="rek-lbl" data-i18n="rek-lbl-num">Nomor Rekening</div>
+                                    <div class="rek-val">1234 5678 90</div>
+                                </div>
+                                <div class="rek-row">
+                                    <div class="rek-lbl" data-i18n="rek-lbl-name">Atas Nama</div>
+                                    <div class="rek-owner">Alan Saputra Lengkoan</div>
+                                </div>
+                                <button class="rek-copy-btn" onclick="copyRek('1234567890','toastBca')">
+                                    <svg viewBox="0 0 14 14" fill="none">
+                                        <rect x="1" y="4" width="8" height="9" rx="1" stroke="#c9a84c"
+                                            stroke-width="0.8" />
+                                        <path
+                                            d="M4 4V2.5A1.5 1.5 0 015.5 1h6A1.5 1.5 0 0113 2.5v7A1.5 1.5 0 0111.5 11H10"
+                                            stroke="#c9a84c" stroke-width="0.8" /></svg>
+                                    <span data-i18n="copy-btn">Salin Nomor Rekening</span>
+                                </button>
+                                <div class="copy-toast" id="toastBca" data-i18n="toast-bca">Nomor rekening BCA tersalin
+                                    ✓</div>
+                            </div>
+
+                            <!-- Mandiri -->
+                            <div class="rek-card">
+                                <div class="rek-header">
+                                    <div class="bank-logo bank-mandiri">MDR</div>
+                                    <div>
+                                        <div class="bank-name">Bank Mandiri</div>
+                                        <div class="bank-type" data-i18n="bank-type">Tabungan Individu</div>
+                                    </div>
+                                </div>
+                                <div class="rek-row">
+                                    <div class="rek-lbl" data-i18n="rek-lbl-num">Nomor Rekening</div>
+                                    <div class="rek-val">1400 0987 6543 2</div>
+                                </div>
+                                <div class="rek-row">
+                                    <div class="rek-lbl" data-i18n="rek-lbl-name">Atas Nama</div>
+                                    <div class="rek-owner">Kris Daniel</div>
+                                </div>
+                                <button class="rek-copy-btn" onclick="copyRek('1400098765432','toastMandiri')">
+                                    <svg viewBox="0 0 14 14" fill="none">
+                                        <rect x="1" y="4" width="8" height="9" rx="1" stroke="#c9a84c"
+                                            stroke-width="0.8" />
+                                        <path
+                                            d="M4 4V2.5A1.5 1.5 0 015.5 1h6A1.5 1.5 0 0113 2.5v7A1.5 1.5 0 0111.5 11H10"
+                                            stroke="#c9a84c" stroke-width="0.8" /></svg>
+                                    <span data-i18n="copy-btn">Salin Nomor Rekening</span>
+                                </button>
+                                <div class="copy-toast" id="toastMandiri" data-i18n="toast-mandiri">Nomor rekening
+                                    Mandiri tersalin ✓</div>
+                            </div>
+
+                            <!-- QRIS -->
+                            <div class="qris-wrap">
+                                <div class="qris-title" data-i18n="qris-title">Atau via QRIS</div>
+                                <div class="qris-box">
+                                    <svg width="130" height="130" viewBox="0 0 120 120">
+                                        <rect width="120" height="120" fill="#f8f4ec" />
+                                        <rect x="8" y="8" width="28" height="28" rx="3" fill="none" stroke="#1a1208"
+                                            stroke-width="2.5" />
+                                        <rect x="12" y="12" width="20" height="20" rx="1" fill="#1a1208" />
+                                        <rect x="84" y="8" width="28" height="28" rx="3" fill="none" stroke="#1a1208"
+                                            stroke-width="2.5" />
+                                        <rect x="88" y="12" width="20" height="20" rx="1" fill="#1a1208" />
+                                        <rect x="8" y="84" width="28" height="28" rx="3" fill="none" stroke="#1a1208"
+                                            stroke-width="2.5" />
+                                        <rect x="12" y="88" width="20" height="20" rx="1" fill="#1a1208" />
+                                        <rect x="44" y="8" width="4" height="4" fill="#1a1208" />
+                                        <rect x="52" y="8" width="4" height="4" fill="#1a1208" />
+                                        <rect x="60" y="8" width="8" height="4" fill="#1a1208" />
+                                        <rect x="44" y="16" width="8" height="4" fill="#1a1208" />
+                                        <rect x="56" y="16" width="4" height="4" fill="#1a1208" />
+                                        <rect x="64" y="16" width="8" height="4" fill="#1a1208" />
+                                        <rect x="44" y="44" width="8" height="4" fill="#1a1208" />
+                                        <rect x="56" y="44" width="4" height="4" fill="#1a1208" />
+                                        <rect x="68" y="44" width="8" height="4" fill="#1a1208" />
+                                        <rect x="84" y="44" width="8" height="4" fill="#1a1208" />
+                                        <rect x="96" y="44" width="12" height="4" fill="#1a1208" />
+                                        <rect x="44" y="52" width="4" height="4" fill="#1a1208" />
+                                        <rect x="52" y="52" width="8" height="4" fill="#1a1208" />
+                                        <rect x="64" y="52" width="4" height="4" fill="#1a1208" />
+                                        <rect x="84" y="52" width="4" height="4" fill="#1a1208" />
+                                        <rect x="92" y="52" width="8" height="4" fill="#1a1208" />
+                                        <rect x="44" y="60" width="8" height="4" fill="#1a1208" />
+                                        <rect x="56" y="60" width="4" height="4" fill="#1a1208" />
+                                        <rect x="64" y="60" width="8" height="4" fill="#1a1208" />
+                                        <rect x="80" y="60" width="4" height="4" fill="#1a1208" />
+                                        <rect x="44" y="76" width="4" height="4" fill="#1a1208" />
+                                        <rect x="52" y="76" width="8" height="4" fill="#1a1208" />
+                                        <rect x="64" y="76" width="4" height="4" fill="#1a1208" />
+                                        <rect x="84" y="76" width="4" height="4" fill="#1a1208" />
+                                        <rect x="44" y="84" width="8" height="4" fill="#1a1208" />
+                                        <rect x="56" y="84" width="4" height="4" fill="#1a1208" />
+                                        <rect x="68" y="84" width="8" height="4" fill="#1a1208" />
+                                        <rect x="46" y="46" width="28" height="28" fill="#f8f4ec" />
+                                        <text x="60" y="57" text-anchor="middle" font-size="7" fill="#003f8a"
+                                            font-family="Arial,sans-serif" font-weight="700">QRIS</text>
+                                        <text x="60" y="67" text-anchor="middle" font-size="5.5" fill="#1a1208"
+                                            font-family="Arial,sans-serif">A&amp;K 2026</text>
+                                    </svg>
+                                </div>
+                                <div class="qris-note" data-i18n="qris-note">Scan QRIS · Berlaku untuk semua aplikasi
+                                    pembayaran</div>
+                            </div>
+
+                            <button class="close-env" onclick="closeEnvelope(event)" data-i18n="close-env">— tutup
+                                amplop —</button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Note -->
+                <div class="gift-note-box fade-in">
+                    <p class="gift-note-text">
+                        <span data-i18n-html="gift-note">Kehadiran dan doa Bapak/Ibu/Saudara/i<br>adalah hadiah terbesar
+                            dan terindah bagi kami.</span><br>
+                        <span class="gift-note-names">— Alan &amp; Kris</span>
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CLOSING -->
+        <section id="closing" class="section-padded">
+            <div class="closing-glow"></div>
+            <div class="section-content fade-in">
+                <h3 class="closing-names">Alan &amp; Kris</h3>
+                <div class="gold-line"></div>
+                <p class="closing-text" data-i18n="closing-text">Dengan hati yang penuh syukur, kami mengucapkan terima
+                    kasih telah merayakan momen suci ini bersama kami. Kehadiran Anda adalah berkat terbesar bagi kami.
+                </p>
+                <div class="closing-verse-box">
+                    <p class="closing-verse" data-i18n="closing-verse">"Kiranya kasih dan berkat Tuhan menyertai kita
+                        semua"</p>
+                </div>
+                <p class="closing-sub" data-i18n="closing-sub">— Bersatu dalam Anugerah Tuhan —</p>
+                <p class="closing-date">26 · 06 · 2026</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- LIGHTBOX -->
+    <div id="lightbox" class="lightbox" aria-hidden="true">
+        <div class="lb-backdrop"></div>
+        <button class="lb-close" id="lbClose" title="Tutup">
+            <svg viewBox="0 0 24 24">
+                <line x1="18" y1="6" x2="6" y2="18" />
+                <line x1="6" y1="6" x2="18" y2="18" /></svg>
+        </button>
+        <button class="lb-nav lb-prev" id="lbPrev" title="Sebelumnya">
+            <svg viewBox="0 0 24 24">
+                <polyline points="15 18 9 12 15 6" /></svg>
+        </button>
+        <div class="lb-img-wrap">
+            <img id="lbImg" src="" alt="">
+        </div>
+        <button class="lb-nav lb-next" id="lbNext" title="Berikutnya">
+            <svg viewBox="0 0 24 24">
+                <polyline points="9 18 15 12 9 6" /></svg>
+        </button>
+        <div class="lb-counter" id="lbCounter">1 / 6</div>
     </div>
-  </div>
-</section>
 
-<!-- ===== MAIN CONTENT ===== -->
-<main id="mainContent">
-
-  <!-- HERO -->
-  <section id="hero">
-    <div class="hero-slider">
-      <div class="hero-slide active">
-        <img src="assets/slide1.JPG" alt="Alan &amp; Kris" onerror="this.style.display='none'">
-      </div>
-      <div class="hero-slide">
-        <img src="assets/slide2.JPG" alt="Alan &amp; Kris" onerror="this.style.display='none'">
-      </div>
-      <div class="hero-slide">
-        <img src="assets/hero.jpg" alt="Alan &amp; Kris" onerror="this.style.display='none'">
-      </div>
-      <div class="hero-dots">
-        <span class="hero-dot active"></span>
-        <span class="hero-dot"></span>
-        <span class="hero-dot"></span>
-      </div>
-    </div>
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <p class="grace-text" data-i18n="grace-text">Dengan anugerah Tuhan, kami dipersatukan dalam ikatan suci pernikahan</p>
-      <h2 class="hero-name">Alan Saputra Lengkoan</h2>
-      <div class="gold-ornament">
-        <span class="ornament-line"></span>
-        <span class="ornament-line"></span>
-      </div>
-      <h2 class="hero-name">Kris Daniel</h2>
-      <p class="hero-date">26 · 06 · 2026</p>
-      <div class="scroll-hint">
-        <span>↓</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROFIL PASANGAN -->
-  <section id="profil" class="section-padded dark-section">
-    <div class="section-content">
-      <h3 class="section-title fade-in" data-i18n="profil-title">Mempelai</h3>
-      <p class="section-sub fade-in" data-i18n="profil-sub">Yang berbahagia dipersatukan dalam anugerah-Nya</p>
-      <div class="profil-grid">
-
-        <!-- Pria -->
-        <div class="profil-card fade-in">
-          <div class="profil-photo-wrap">
-            <img src="assets/groom.svg" alt="Alan Saputra Lengkoan" onerror="this.style.display='none'">
-            <div class="profil-photo-fallback">A</div>
-          </div>
-          <div class="profil-role" data-i18n="role-groom">Mempelai Pria</div>
-          <h3 class="profil-name">Alan Saputra Lengkoan</h3>
-          <div class="profil-divider"></div>
-          <p class="profil-parents" data-i18n="parents-groom">Putra dari</p>
-          <p class="profil-parents-name">Bapak [Nama Ayah] &amp; Ibu [Nama Ibu]</p>
-          <a href="https://instagram.com/alan_lengkoan" target="_blank" class="profil-ig">
-            <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
-            @alan_lengkoan
-          </a>
-        </div>
-
-        <!-- Wanita -->
-        <div class="profil-card fade-in">
-          <div class="profil-photo-wrap">
-            <img src="assets/bride.svg" alt="Kris Daniel" onerror="this.style.display='none'">
-            <div class="profil-photo-fallback">K</div>
-          </div>
-          <div class="profil-role" data-i18n="role-bride">Mempelai Wanita</div>
-          <h3 class="profil-name">Kris Daniel</h3>
-          <div class="profil-divider"></div>
-          <p class="profil-parents" data-i18n="parents-bride">Putri dari</p>
-          <p class="profil-parents-name">Bapak [Nama Ayah] &amp; Ibu [Nama Ibu]</p>
-          <a href="https://instagram.com/kris_daniel" target="_blank" class="profil-ig">
-            <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
-            @kris_daniel
-          </a>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- BIBLE VERSE -->
-  <section id="bible-verse" class="section-padded">
-    <div class="glow-bg"></div>
-    <div class="stained-glass-left"></div>
-    <div class="stained-glass-right"></div>
-    <div class="section-content fade-in">
-      <blockquote>
-        <p class="verse-main" data-i18n-html="verse-main">"Demikianlah tinggal ketiga hal ini, yaitu iman, pengharapan dan kasih,<br>dan yang paling besar di antaranya ialah kasih."</p>
-        <cite data-i18n="verse-cite">— 1 Korintus 13:13</cite>
-      </blockquote>
-    </div>
-  </section>
-
-  <!-- LOVE STORY -->
-  <section id="love-story" class="section-padded dark-section">
-    <div class="section-content">
-      <h3 class="section-title fade-in" data-i18n="ls-title">Kisah Cinta Kami</h3>
-      <p class="section-sub fade-in" data-i18n="ls-sub">Sembilan tahun semesta merajut cerita ini</p>
-      <div class="timeline">
-        <div class="timeline-item fade-in">
-          <div class="timeline-dot"></div>
-          <div class="timeline-year">2017</div>
-          <div class="timeline-body">
-            <h4 data-i18n="tl-2017a-h">Berawal dari Percakapan Sederhana</h4>
-            <p data-i18n="tl-2017a-p">Di tahun ketiga perkuliahan, semesta mulai merajut cerita kami — dari percakapan sederhana di layar, dengan alasan yang terdengar biasa, namun perlahan membawa kami saling mengenal.</p>
-          </div>
-        </div>
-        <div class="timeline-item fade-in">
-          <div class="timeline-dot"></div>
-          <div class="timeline-year">2017</div>
-          <div class="timeline-body">
-            <h4 data-i18n="tl-2017b-h">Pertemuan Pertama di Bazar</h4>
-            <p data-i18n="tl-2017b-p">Pertemuan pertama di sebuah bazar kecil menjadi awal, di mana tawa terasa ringan dan percakapan mengalir tanpa jeda. Sejak saat itu, kami berjalan sebagai sahabat — saling menguatkan, saling menjaga, dalam langkah yang tenang dan sederhana.</p>
-          </div>
-        </div>
-        <div class="timeline-item fade-in">
-          <div class="timeline-dot"></div>
-          <div class="timeline-year">2021</div>
-          <div class="timeline-body">
-            <h4 data-i18n="tl-2021-h">Dipertemukan Kembali</h4>
-            <p data-i18n="tl-2021-p">Meski sempat terpisah oleh jarak dan kesibukan, cerita ini tidak benar-benar usai. Kami dipertemukan kembali dalam versi yang lebih dewasa, lebih siap — dan kali ini, kami memilih untuk berjalan ke arah yang sama.</p>
-          </div>
-        </div>
-        <div class="timeline-item fade-in">
-          <div class="timeline-dot"></div>
-          <div class="timeline-year">2026</div>
-          <div class="timeline-body">
-            <h4 data-i18n="tl-2026-h">Bersama, Selamanya</h4>
-            <p data-i18n="tl-2026-p">Lebih dari lima tahun kami berjalan berdampingan, menjaga apa yang sudah lama ada. Kini, kami memutuskan untuk tidak lagi berjalan sendiri — melainkan bersama, selamanya.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- EVENT DETAILS -->
-  <section id="events" class="section-padded">
-    <div class="section-content">
-      <h3 class="section-title fade-in" data-i18n="events-title">Rangkaian Acara</h3>
-      <p class="section-sub fade-in" data-i18n="events-sub">Dengan sukacita kami mengundang Anda untuk merayakan bersama kami</p>
-      <div class="countdown fade-in">
-        <div class="count-box">
-          <div class="count-num" id="cdDays">00</div>
-          <div class="count-label" data-i18n="cd-days">Hari</div>
-        </div>
-        <div class="count-sep">·</div>
-        <div class="count-box">
-          <div class="count-num" id="cdHours">00</div>
-          <div class="count-label" data-i18n="cd-hours">Jam</div>
-        </div>
-        <div class="count-sep">·</div>
-        <div class="count-box">
-          <div class="count-num" id="cdMinutes">00</div>
-          <div class="count-label" data-i18n="cd-minutes">Menit</div>
-        </div>
-        <div class="count-sep">·</div>
-        <div class="count-box">
-          <div class="count-num" id="cdSeconds">00</div>
-          <div class="count-label" data-i18n="cd-seconds">Detik</div>
-        </div>
-      </div>
-      <div class="events-grid">
-        <div class="event-card fade-in">
-          <h4 data-i18n="ev1-title">Pemberkatan Nikah</h4>
-          <div class="event-divider"></div>
-          <p class="event-detail"><span>📅</span> <span data-i18n="ev1-date">Jumat, 26 · 06 · 2026</span></p>
-          <p class="event-detail"><span>🕘</span> 09.00 – 11.00 WIB</p>
-          <p class="event-venue">Grace Cathedral Church</p>
-          <p class="event-address">Jl. Blessing No. 123, Jakarta Pusat</p>
-          <a href="https://maps.google.com" target="_blank" class="map-btn" data-i18n="map-btn">Lihat di Peta ↗</a>
-        </div>
-        <div class="event-card fade-in">
-          <h4 data-i18n="ev2-title">Resepsi Pernikahan</h4>
-          <div class="event-divider"></div>
-          <p class="event-detail"><span>📅</span> <span data-i18n="ev2-date">Jumat, 26 · 06 · 2026</span></p>
-          <p class="event-detail"><span>🕛</span> 12.00 – 15.00 WIB</p>
-          <p class="event-venue">The Grand Ballroom</p>
-          <p class="event-address">Jl. Glory No. 456, Jakarta Selatan</p>
-          <a href="https://maps.google.com" target="_blank" class="map-btn" data-i18n="map-btn">Lihat di Peta ↗</a>
-        </div>
-      </div>
-      <div class="save-date-wrap fade-in">
-        <p class="save-date-text" data-i18n="save-date-text">Tandai harinya agar tidak terlewat</p>
-        <a class="save-date-btn"
-          href="https://calendar.google.com/calendar/r/eventedit?text=The+Wedding+of+Alan+%26+Kris&dates=20260626T020000Z/20260626T080000Z&details=Pemberkatan+Nikah+%26+Resepsi+Pernikahan+Alan+%26+Kris&location=Grace+Cathedral+Church"
-          target="_blank">
-          <svg viewBox="0 0 20 20" fill="none"><rect x="2" y="3" width="16" height="15" rx="2" stroke="currentColor" stroke-width="1.2"/><path d="M2 8H18" stroke="currentColor" stroke-width="1.2"/><path d="M6 1V4M14 1V4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
-          <span data-i18n="save-date-btn">Simpan Tanggal</span>
+    <!-- FLOATING NAV -->
+    <nav id="floatNav" class="float-nav" aria-label="Navigasi Cepat">
+        <a href="#hero" class="fn-item">
+            <svg viewBox="0 0 24 24">
+                <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+                <polyline points="9 22 9 12 15 12 15 22" /></svg>
         </a>
-      </div>
-    </div>
-  </section>
+        <a href="#profil" class="fn-item">
+            <svg viewBox="0 0 24 24">
+                <circle cx="8" cy="7" r="3" />
+                <path d="M2 20c0-3.3 2.7-6 6-6h1" />
+                <circle cx="17" cy="10" r="3" />
+                <path d="M14 20c0-2.2 1.8-4 4-4s4 1.8 4 4" /></svg>
+        </a>
+        <a href="#love-story" class="fn-item">
+            <svg viewBox="0 0 24 24">
+                <path
+                    d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
+            </svg>
+        </a>
+        <a href="#events" class="fn-item">
+            <svg viewBox="0 0 24 24">
+                <rect x="3" y="4" width="18" height="18" rx="2" />
+                <line x1="16" y1="2" x2="16" y2="6" />
+                <line x1="8" y1="2" x2="8" y2="6" />
+                <line x1="3" y1="10" x2="21" y2="10" /></svg>
+        </a>
+        <a href="#gallery" class="fn-item">
+            <svg viewBox="0 0 24 24">
+                <rect x="3" y="3" width="18" height="18" rx="2" />
+                <circle cx="8.5" cy="8.5" r="1.5" />
+                <polyline points="21 15 16 10 5 21" /></svg>
+        </a>
+        <a href="#rsvp" class="fn-item">
+            <svg viewBox="0 0 24 24">
+                <path d="M9 11l3 3L22 4" />
+                <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" /></svg>
+        </a>
+        <a href="#gift" class="fn-item">
+            <svg viewBox="0 0 24 24">
+                <polyline points="20 12 20 22 4 22 4 12" />
+                <rect x="2" y="7" width="20" height="5" />
+                <line x1="12" y1="22" x2="12" y2="7" />
+                <path d="M12 7H7.5a2.5 2.5 0 010-5C11 2 12 7 12 7z" />
+                <path d="M12 7h4.5a2.5 2.5 0 000-5C13 2 12 7 12 7z" /></svg>
+        </a>
+        <span class="fn-sep"></span>
+        <button class="fn-item fn-lang" id="langToggle" title="Switch Language">EN</button>
+        <button class="fn-item" id="musicToggle" title="Musik">
+            <svg viewBox="0 0 24 24">
+                <path d="M9 18V5l12-2v13" />
+                <circle cx="6" cy="18" r="3" />
+                <circle cx="18" cy="16" r="3" /></svg>
+        </button>
+    </nav>
 
-  <!-- GALLERY -->
-  <section id="gallery" class="section-padded dark-section">
-    <div class="section-content">
-      <h3 class="section-title fade-in" data-i18n="gallery-title">Momen Kami</h3>
-      <p class="section-sub fade-in" data-i18n="gallery-sub">Sekilas perjalanan cinta kami bersama</p>
-      <div class="gallery-grid">
-        <div class="gallery-item fade-in" data-index="0"><img src="assets/photo1.svg" alt="Momen 1" onerror="this.parentElement.classList.add('no-img')"></div>
-        <div class="gallery-item gallery-tall fade-in" data-index="1"><img src="assets/photo2.svg" alt="Momen 2" onerror="this.parentElement.classList.add('no-img')"></div>
-        <div class="gallery-item fade-in" data-index="2"><img src="assets/photo3.svg" alt="Momen 3" onerror="this.parentElement.classList.add('no-img')"></div>
-        <div class="gallery-item fade-in" data-index="3"><img src="assets/photo4.svg" alt="Momen 4" onerror="this.parentElement.classList.add('no-img')"></div>
-        <div class="gallery-item gallery-wide fade-in" data-index="4"><img src="assets/photo5.svg" alt="Momen 5" onerror="this.parentElement.classList.add('no-img')"></div>
-        <div class="gallery-item fade-in" data-index="5"><img src="assets/photo6.svg" alt="Momen 6" onerror="this.parentElement.classList.add('no-img')"></div>
-      </div>
-    </div>
-  </section>
+    <audio id="bgMusic" loop preload="none">
+        <source src="assets/audio/music.mp3" type="audio/mpeg">
+    </audio>
 
-  <!-- RSVP -->
-  <section id="rsvp" class="section-padded">
-    <div class="section-content">
-      <h3 class="section-title fade-in" data-i18n="rsvp-title">Konfirmasi Kehadiran</h3>
-      <p class="section-sub fade-in" data-i18n="rsvp-sub">Mohon konfirmasi kehadiran Anda sebelum 1 · 06 · 2026</p>
-      <form class="rsvp-form fade-in" id="rsvpForm">
-        <div class="form-group">
-          <input type="text" placeholder="Nama Lengkap Anda" data-i18n-ph="rsvp-ph-name" required>
-        </div>
-        <div class="form-group">
-          <input type="text" placeholder="Nomor Telepon" data-i18n-ph="rsvp-ph-phone">
-        </div>
-        <div class="form-group">
-          <select required>
-            <option value="" data-i18n="rsvp-opt-default">Apakah Anda akan hadir?</option>
-            <option value="yes" data-i18n="rsvp-opt-yes">Ya, saya akan hadir</option>
-            <option value="no" data-i18n="rsvp-opt-no">Mohon maaf, saya tidak dapat hadir</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <input type="number" placeholder="Jumlah Tamu" data-i18n-ph="rsvp-ph-guests" min="1" max="5">
-        </div>
-        <button type="submit" class="submit-btn" id="rsvpSubmit" data-i18n="rsvp-submit">Konfirmasi Kehadiran</button>
-      </form>
-      <p class="form-success hidden" id="rsvpSuccess" data-i18n="rsvp-success">✦ Terima kasih! Kehadiran Anda telah kami catat. ✦</p>
-    </div>
-  </section>
-
-  <!-- GUESTBOOK -->
-  <section id="guestbook" class="section-padded dark-section">
-    <div class="section-content">
-      <h3 class="section-title fade-in" data-i18n="gb-title">Doa &amp; Ucapan</h3>
-      <p class="section-sub fade-in" data-i18n="gb-sub">Bagikan doa dan ucapan selamat untuk kedua mempelai</p>
-      <form class="wish-form fade-in" id="wishForm">
-        <input type="text" placeholder="Nama Anda" data-i18n-ph="gb-ph-name" required>
-        <textarea placeholder="Tuliskan doa dan ucapan selamat untuk Alan &amp; Kris..." data-i18n-ph="gb-ph-msg" rows="4" required></textarea>
-        <button type="submit" class="submit-btn" data-i18n="gb-submit">Kirim Ucapan</button>
-      </form>
-      <div class="wishes-list" id="wishesList"></div>
-    </div>
-  </section>
-
-  <!-- DIGITAL ENVELOPE -->
-  <section id="gift" class="section-padded">
-    <div class="section-content">
-      <h3 class="section-title fade-in">Digital Gift</h3>
-      <div class="amplop-sub fade-in" data-i18n-html="amplop-sub">Doa dan kehadiran Anda adalah hadiah terbesar bagi kami.<br>Bagi yang ingin memberikan berkat, kami dengan rendah hati<br>menerima melalui rekening berikut.</div>
-
-      <!-- Animated Envelope -->
-      <div class="envelope-wrap fade-in" id="envWrap">
-        <div class="env-body">
-
-          <!-- Flap SVG -->
-          <svg id="envFlap" class="env-flap" width="100%" viewBox="0 0 520 130" preserveAspectRatio="none">
-            <rect width="520" height="130" fill="none"/>
-            <path d="M0 0 L260 96 L520 0 Z" fill="#2a0012" stroke="#c9a84c55" stroke-width="0.8"/>
-            <line x1="0" y1="0" x2="260" y2="96" stroke="#c9a84c22" stroke-width="0.5"/>
-            <line x1="520" y1="0" x2="260" y2="96" stroke="#c9a84c22" stroke-width="0.5"/>
-            <circle cx="260" cy="56" r="22" fill="#1e000e" stroke="#c9a84c" stroke-width="1"/>
-            <circle cx="260" cy="56" r="14" fill="none" stroke="#c9a84c44" stroke-width="0.5"/>
-            <text x="260" y="62" text-anchor="middle" font-size="8" fill="#c9a84c88" font-family="Georgia,serif" font-style="italic">A &amp; K</text>
-          </svg>
-
-          <!-- Closed state -->
-          <div class="env-front" id="envFront">
-            <div class="env-label" data-i18n="env-label-to">Kepada Yth.</div>
-            <div class="env-name" id="envGuestName">Tamu Undangan</div>
-            <div class="env-separator"></div>
-            <div class="env-label" style="margin-bottom:6px;" data-i18n="env-label-from">dari</div>
-            <div class="env-from">Alan &amp; Kris</div>
-            <div class="env-hint" data-i18n="env-hint">— ketuk untuk membuka —</div>
-          </div>
-
-          <!-- Open state -->
-          <div class="env-content" id="envContent">
-
-            <div class="env-content-title">
-              <div class="env-content-label" data-i18n="env-content-label">Nomor Rekening</div>
-              <p class="env-content-sub" data-i18n="env-content-sub">Pilih bank untuk menyalin nomor rekening</p>
-            </div>
-
-            <!-- BCA -->
-            <div class="rek-card">
-              <div class="rek-header">
-                <div class="bank-logo bank-bca">BCA</div>
-                <div>
-                  <div class="bank-name">Bank BCA</div>
-                  <div class="bank-type" data-i18n="bank-type">Tabungan Individu</div>
-                </div>
-              </div>
-              <div class="rek-row">
-                <div class="rek-lbl" data-i18n="rek-lbl-num">Nomor Rekening</div>
-                <div class="rek-val">1234 5678 90</div>
-              </div>
-              <div class="rek-row">
-                <div class="rek-lbl" data-i18n="rek-lbl-name">Atas Nama</div>
-                <div class="rek-owner">Alan Saputra Lengkoan</div>
-              </div>
-              <button class="rek-copy-btn" onclick="copyRek('1234567890','toastBca')">
-                <svg viewBox="0 0 14 14" fill="none"><rect x="1" y="4" width="8" height="9" rx="1" stroke="#c9a84c" stroke-width="0.8"/><path d="M4 4V2.5A1.5 1.5 0 015.5 1h6A1.5 1.5 0 0113 2.5v7A1.5 1.5 0 0111.5 11H10" stroke="#c9a84c" stroke-width="0.8"/></svg>
-                <span data-i18n="copy-btn">Salin Nomor Rekening</span>
-              </button>
-              <div class="copy-toast" id="toastBca" data-i18n="toast-bca">Nomor rekening BCA tersalin ✓</div>
-            </div>
-
-            <!-- Mandiri -->
-            <div class="rek-card">
-              <div class="rek-header">
-                <div class="bank-logo bank-mandiri">MDR</div>
-                <div>
-                  <div class="bank-name">Bank Mandiri</div>
-                  <div class="bank-type" data-i18n="bank-type">Tabungan Individu</div>
-                </div>
-              </div>
-              <div class="rek-row">
-                <div class="rek-lbl" data-i18n="rek-lbl-num">Nomor Rekening</div>
-                <div class="rek-val">1400 0987 6543 2</div>
-              </div>
-              <div class="rek-row">
-                <div class="rek-lbl" data-i18n="rek-lbl-name">Atas Nama</div>
-                <div class="rek-owner">Kris Daniel</div>
-              </div>
-              <button class="rek-copy-btn" onclick="copyRek('1400098765432','toastMandiri')">
-                <svg viewBox="0 0 14 14" fill="none"><rect x="1" y="4" width="8" height="9" rx="1" stroke="#c9a84c" stroke-width="0.8"/><path d="M4 4V2.5A1.5 1.5 0 015.5 1h6A1.5 1.5 0 0113 2.5v7A1.5 1.5 0 0111.5 11H10" stroke="#c9a84c" stroke-width="0.8"/></svg>
-                <span data-i18n="copy-btn">Salin Nomor Rekening</span>
-              </button>
-              <div class="copy-toast" id="toastMandiri" data-i18n="toast-mandiri">Nomor rekening Mandiri tersalin ✓</div>
-            </div>
-
-            <!-- QRIS -->
-            <div class="qris-wrap">
-              <div class="qris-title" data-i18n="qris-title">Atau via QRIS</div>
-              <div class="qris-box">
-                <svg width="130" height="130" viewBox="0 0 120 120">
-                  <rect width="120" height="120" fill="#f8f4ec"/>
-                  <rect x="8" y="8" width="28" height="28" rx="3" fill="none" stroke="#1a1208" stroke-width="2.5"/>
-                  <rect x="12" y="12" width="20" height="20" rx="1" fill="#1a1208"/>
-                  <rect x="84" y="8" width="28" height="28" rx="3" fill="none" stroke="#1a1208" stroke-width="2.5"/>
-                  <rect x="88" y="12" width="20" height="20" rx="1" fill="#1a1208"/>
-                  <rect x="8" y="84" width="28" height="28" rx="3" fill="none" stroke="#1a1208" stroke-width="2.5"/>
-                  <rect x="12" y="88" width="20" height="20" rx="1" fill="#1a1208"/>
-                  <rect x="44" y="8" width="4" height="4" fill="#1a1208"/><rect x="52" y="8" width="4" height="4" fill="#1a1208"/><rect x="60" y="8" width="8" height="4" fill="#1a1208"/>
-                  <rect x="44" y="16" width="8" height="4" fill="#1a1208"/><rect x="56" y="16" width="4" height="4" fill="#1a1208"/><rect x="64" y="16" width="8" height="4" fill="#1a1208"/>
-                  <rect x="44" y="44" width="8" height="4" fill="#1a1208"/><rect x="56" y="44" width="4" height="4" fill="#1a1208"/><rect x="68" y="44" width="8" height="4" fill="#1a1208"/><rect x="84" y="44" width="8" height="4" fill="#1a1208"/><rect x="96" y="44" width="12" height="4" fill="#1a1208"/>
-                  <rect x="44" y="52" width="4" height="4" fill="#1a1208"/><rect x="52" y="52" width="8" height="4" fill="#1a1208"/><rect x="64" y="52" width="4" height="4" fill="#1a1208"/><rect x="84" y="52" width="4" height="4" fill="#1a1208"/><rect x="92" y="52" width="8" height="4" fill="#1a1208"/>
-                  <rect x="44" y="60" width="8" height="4" fill="#1a1208"/><rect x="56" y="60" width="4" height="4" fill="#1a1208"/><rect x="64" y="60" width="8" height="4" fill="#1a1208"/><rect x="80" y="60" width="4" height="4" fill="#1a1208"/>
-                  <rect x="44" y="76" width="4" height="4" fill="#1a1208"/><rect x="52" y="76" width="8" height="4" fill="#1a1208"/><rect x="64" y="76" width="4" height="4" fill="#1a1208"/><rect x="84" y="76" width="4" height="4" fill="#1a1208"/>
-                  <rect x="44" y="84" width="8" height="4" fill="#1a1208"/><rect x="56" y="84" width="4" height="4" fill="#1a1208"/><rect x="68" y="84" width="8" height="4" fill="#1a1208"/>
-                  <rect x="46" y="46" width="28" height="28" fill="#f8f4ec"/>
-                  <text x="60" y="57" text-anchor="middle" font-size="7" fill="#003f8a" font-family="Arial,sans-serif" font-weight="700">QRIS</text>
-                  <text x="60" y="67" text-anchor="middle" font-size="5.5" fill="#1a1208" font-family="Arial,sans-serif">A&amp;K 2026</text>
-                </svg>
-              </div>
-              <div class="qris-note" data-i18n="qris-note">Scan QRIS · Berlaku untuk semua aplikasi pembayaran</div>
-            </div>
-
-            <button class="close-env" onclick="closeEnvelope(event)" data-i18n="close-env">— tutup amplop —</button>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- Note -->
-      <div class="gift-note-box fade-in">
-        <p class="gift-note-text">
-          <span data-i18n-html="gift-note">Kehadiran dan doa Bapak/Ibu/Saudara/i<br>adalah hadiah terbesar dan terindah bagi kami.</span><br>
-          <span class="gift-note-names">— Alan &amp; Kris</span>
-        </p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- CLOSING -->
-  <section id="closing" class="section-padded">
-    <div class="closing-glow"></div>
-    <div class="section-content fade-in">
-      <h3 class="closing-names">Alan &amp; Kris</h3>
-      <div class="gold-line"></div>
-      <p class="closing-text" data-i18n="closing-text">Dengan hati yang penuh syukur, kami mengucapkan terima kasih telah merayakan momen suci ini bersama kami. Kehadiran Anda adalah berkat terbesar bagi kami.</p>
-      <div class="closing-verse-box">
-        <p class="closing-verse" data-i18n="closing-verse">"Kiranya kasih dan berkat Tuhan menyertai kita semua"</p>
-      </div>
-      <p class="closing-sub" data-i18n="closing-sub">— Bersatu dalam Anugerah Tuhan —</p>
-      <p class="closing-date">26 · 06 · 2026</p>
-    </div>
-  </section>
-
-</main>
-
-<!-- LIGHTBOX -->
-<div id="lightbox" class="lightbox" aria-hidden="true">
-  <div class="lb-backdrop"></div>
-  <button class="lb-close" id="lbClose" title="Tutup">
-    <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-  </button>
-  <button class="lb-nav lb-prev" id="lbPrev" title="Sebelumnya">
-    <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
-  </button>
-  <div class="lb-img-wrap">
-    <img id="lbImg" src="" alt="">
-  </div>
-  <button class="lb-nav lb-next" id="lbNext" title="Berikutnya">
-    <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
-  </button>
-  <div class="lb-counter" id="lbCounter">1 / 6</div>
-</div>
-
-<!-- FLOATING NAV -->
-<nav id="floatNav" class="float-nav" aria-label="Navigasi Cepat">
-  <a href="#hero" class="fn-item">
-    <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-  </a>
-  <a href="#profil" class="fn-item">
-    <svg viewBox="0 0 24 24"><circle cx="8" cy="7" r="3"/><path d="M2 20c0-3.3 2.7-6 6-6h1"/><circle cx="17" cy="10" r="3"/><path d="M14 20c0-2.2 1.8-4 4-4s4 1.8 4 4"/></svg>
-  </a>
-  <a href="#love-story" class="fn-item">
-    <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
-  </a>
-  <a href="#events" class="fn-item">
-    <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-  </a>
-  <a href="#gallery" class="fn-item">
-    <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-  </a>
-  <a href="#gift" class="fn-item">
-    <svg viewBox="0 0 24 24"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 010-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 000-5C13 2 12 7 12 7z"/></svg>
-  </a>
-  <span class="fn-sep"></span>
-  <button class="fn-item fn-lang" id="langToggle" title="Switch Language">EN</button>
-  <button class="fn-item" id="musicToggle" title="Musik">
-    <svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
-  </button>
-</nav>
-
-<audio id="bgMusic" loop preload="none">
-  <source src="assets/music.mp3" type="audio/mpeg">
-</audio>
-
-<script src="js/main.js"></script>
+    <script src="js/main.js"></script>
 </body>
+
 </html>
