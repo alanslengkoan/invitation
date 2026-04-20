@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="900" viewBox="0 0 600 900">
+  <defs>
+    <radialGradient id="bg2" cx="50%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#1a1408"/>
+      <stop offset="100%" stop-color="#080600"/>
+    </radialGradient>
+  </defs>
+  <rect width="600" height="900" fill="url(#bg2)"/>
+  <pattern id="d2" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
+    <circle cx="12" cy="12" r="0.7" fill="#c9a84c" opacity="0.08"/>
+  </pattern>
+  <rect width="600" height="900" fill="url(#d2)"/>
+  <rect x="24" y="24" width="552" height="852" fill="none" stroke="#c9a84c" stroke-width="0.8" opacity="0.3"/>
+  <path d="M24 24 L24 64 M24 24 L64 24" stroke="#c9a84c" stroke-width="1.2" fill="none" opacity="0.5"/>
+  <path d="M576 24 L576 64 M576 24 L536 24" stroke="#c9a84c" stroke-width="1.2" fill="none" opacity="0.5"/>
+  <path d="M24 876 L24 836 M24 876 L64 876" stroke="#c9a84c" stroke-width="1.2" fill="none" opacity="0.5"/>
+  <path d="M576 876 L576 836 M576 876 L536 876" stroke="#c9a84c" stroke-width="1.2" fill="none" opacity="0.5"/>
+  <!-- Tall portrait: single figure -->
+  <ellipse cx="300" cy="440" rx="120" ry="250" fill="#c9a84c" opacity="0.04"/>
+  <circle cx="300" cy="240" r="55" fill="#c9a84c" opacity="0.28"/>
+  <path d="M300 295 C240 310 220 380 225 620 L375 620 C380 380 360 310 300 295 Z" fill="#c9a84c" opacity="0.2"/>
+  <!-- Veil / hair flowing -->
+  <path d="M258 220 Q240 170 260 140 Q280 110 300 130" fill="none" stroke="#c9a84c" stroke-width="1.5" opacity="0.2"/>
+  <path d="M342 220 Q360 200 355 250 Q350 300 340 350" fill="none" stroke="#c9a84c" stroke-width="1" opacity="0.15"/>
+  <!-- Light rays at top -->
+  <line x1="300" y1="24" x2="300" y2="180" stroke="#c9a84c" stroke-width="0.5" opacity="0.15"/>
+  <line x1="240" y1="24" x2="280" y2="180" stroke="#c9a84c" stroke-width="0.3" opacity="0.08"/>
+  <line x1="360" y1="24" x2="320" y2="180" stroke="#c9a84c" stroke-width="0.3" opacity="0.08"/>
+  <!-- Ornament -->
+  <text x="300" y="700" text-anchor="middle" font-size="24" fill="#c9a84c" opacity="0.25" font-family="Georgia,serif">✦</text>
+  <text x="300" y="760" text-anchor="middle" font-size="13" fill="#c9a84c" opacity="0.35" font-family="Georgia,serif" font-style="italic">Momen 2</text>
+  <text x="300" y="785" text-anchor="middle" font-size="9" fill="#c9a84c" opacity="0.18" font-family="Georgia,serif" letter-spacing="4">GANTI FOTO</text>
+</svg>

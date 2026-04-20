@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600">
+  <defs>
+    <radialGradient id="bg5" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#1e1608"/>
+      <stop offset="100%" stop-color="#060500"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bg5)"/>
+  <pattern id="d5" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
+    <circle cx="12" cy="12" r="0.7" fill="#c9a84c" opacity="0.07"/>
+  </pattern>
+  <rect width="1200" height="600" fill="url(#d5)"/>
+  <rect x="30" y="30" width="1140" height="540" fill="none" stroke="#c9a84c" stroke-width="0.8" opacity="0.25"/>
+  <path d="M30 30 L30 75 M30 30 L75 30" stroke="#c9a84c" stroke-width="1.2" fill="none" opacity="0.5"/>
+  <path d="M1170 30 L1170 75 M1170 30 L1125 30" stroke="#c9a84c" stroke-width="1.2" fill="none" opacity="0.5"/>
+  <path d="M30 570 L30 525 M30 570 L75 570" stroke="#c9a84c" stroke-width="1.2" fill="none" opacity="0.5"/>
+  <path d="M1170 570 L1170 525 M1170 570 L1125 570" stroke="#c9a84c" stroke-width="1.2" fill="none" opacity="0.5"/>
+  <!-- Wide landscape: couple with scenic background -->
+  <!-- Mountains/hills suggestion -->
+  <path d="M0 400 Q200 280 400 320 Q600 360 800 300 Q1000 240 1200 350 L1200 600 L0 600 Z" fill="#c9a84c" opacity="0.04"/>
+  <path d="M0 440 Q300 380 600 420 Q900 460 1200 400 L1200 600 L0 600 Z" fill="#c9a84c" opacity="0.04"/>
+  <!-- Couple center -->
+  <ellipse cx="600" cy="350" rx="200" ry="150" fill="#c9a84c" opacity="0.04"/>
+  <circle cx="560" cy="230" r="38" fill="#c9a84c" opacity="0.28"/>
+  <ellipse cx="560" cy="330" rx="36" ry="85" fill="#c9a84c" opacity="0.22"/>
+  <circle cx="640" cy="240" r="30" fill="#c9a84c" opacity="0.28"/>
+  <path d="M640 270 C610 282 598 330 600 430 L680 430 C682 330 670 282 640 270 Z" fill="#c9a84c" opacity="0.18"/>
+  <!-- Light rays -->
+  <line x1="600" y1="30" x2="590" y2="190" stroke="#c9a84c" stroke-width="0.5" opacity="0.12"/>
+  <line x1="560" y1="30" x2="555" y2="190" stroke="#c9a84c" stroke-width="0.3" opacity="0.07"/>
+  <line x1="640" y1="30" x2="630" y2="190" stroke="#c9a84c" stroke-width="0.3" opacity="0.07"/>
+  <!-- Ornament top center -->
+  <text x="600" y="90" text-anchor="middle" font-size="18" fill="#c9a84c" opacity="0.25" font-family="Georgia,serif">✦</text>
+  <line x1="420" y1="90" x2="572" y2="90" stroke="#c9a84c" stroke-width="0.5" opacity="0.2"/>
+  <line x1="628" y1="90" x2="780" y2="90" stroke="#c9a84c" stroke-width="0.5" opacity="0.2"/>
+  <text x="600" y="510" text-anchor="middle" font-size="13" fill="#c9a84c" opacity="0.35" font-family="Georgia,serif" font-style="italic">Momen 5</text>
+  <text x="600" y="535" text-anchor="middle" font-size="9" fill="#c9a84c" opacity="0.18" font-family="Georgia,serif" letter-spacing="4">GANTI FOTO</text>
+</svg>

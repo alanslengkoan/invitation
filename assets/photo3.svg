@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600">
+  <defs>
+    <radialGradient id="bg3" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#1c1508"/>
+      <stop offset="100%" stop-color="#080600"/>
+    </radialGradient>
+  </defs>
+  <rect width="600" height="600" fill="url(#bg3)"/>
+  <pattern id="d3" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
+    <circle cx="12" cy="12" r="0.7" fill="#c9a84c" opacity="0.08"/>
+  </pattern>
+  <rect width="600" height="600" fill="url(#d3)"/>
+  <rect x="24" y="24" width="552" height="552" fill="none" stroke="#c9a84c" stroke-width="0.8" opacity="0.3"/>
+  <path d="M24 24 L24 60 M24 24 L60 24" stroke="#c9a84c" stroke-width="1.2" fill="none" opacity="0.5"/>
+  <path d="M576 24 L576 60 M576 24 L540 24" stroke="#c9a84c" stroke-width="1.2" fill="none" opacity="0.5"/>
+  <path d="M24 576 L24 540 M24 576 L60 576" stroke="#c9a84c" stroke-width="1.2" fill="none" opacity="0.5"/>
+  <path d="M576 576 L576 540 M576 576 L540 576" stroke="#c9a84c" stroke-width="1.2" fill="none" opacity="0.5"/>
+  <!-- Holding hands silhouette -->
+  <circle cx="230" cy="220" r="40" fill="#c9a84c" opacity="0.28"/>
+  <ellipse cx="230" cy="330" rx="38" ry="90" fill="#c9a84c" opacity="0.22"/>
+  <circle cx="370" cy="230" r="33" fill="#c9a84c" opacity="0.28"/>
+  <path d="M370 263 C330 275 315 330 318 440 L422 440 C425 330 410 275 370 263 Z" fill="#c9a84c" opacity="0.18"/>
+  <!-- Hands joined -->
+  <path d="M268 390 Q300 380 332 390" stroke="#c9a84c" stroke-width="8" fill="none" opacity="0.22" stroke-linecap="round"/>
+  <!-- Ring symbol -->
+  <circle cx="300" cy="145" r="20" fill="none" stroke="#c9a84c" stroke-width="1.5" opacity="0.3"/>
+  <circle cx="300" cy="145" r="12" fill="none" stroke="#c9a84c" stroke-width="0.6" opacity="0.2"/>
+  <text x="300" y="490" text-anchor="middle" font-size="13" fill="#c9a84c" opacity="0.35" font-family="Georgia,serif" font-style="italic">Momen 3</text>
+  <text x="300" y="515" text-anchor="middle" font-size="9" fill="#c9a84c" opacity="0.18" font-family="Georgia,serif" letter-spacing="4">GANTI FOTO</text>
+</svg>

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600">
+  <defs>
+    <radialGradient id="bg4" cx="60%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#1e1608"/>
+      <stop offset="100%" stop-color="#060500"/>
+    </radialGradient>
+  </defs>
+  <rect width="600" height="600" fill="url(#bg4)"/>
+  <pattern id="d4" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
+    <circle cx="12" cy="12" r="0.7" fill="#c9a84c" opacity="0.08"/>
+  </pattern>
+  <rect width="600" height="600" fill="url(#d4)"/>
+  <rect x="24" y="24" width="552" height="552" fill="none" stroke="#c9a84c" stroke-width="0.8" opacity="0.3"/>
+  <path d="M24 24 L24 60 M24 24 L60 24" stroke="#c9a84c" stroke-width="1.2" fill="none" opacity="0.5"/>
+  <path d="M576 24 L576 60 M576 24 L540 24" stroke="#c9a84c" stroke-width="1.2" fill="none" opacity="0.5"/>
+  <path d="M24 576 L24 540 M24 576 L60 576" stroke="#c9a84c" stroke-width="1.2" fill="none" opacity="0.5"/>
+  <path d="M576 576 L576 540 M576 576 L540 576" stroke="#c9a84c" stroke-width="1.2" fill="none" opacity="0.5"/>
+  <!-- Church background suggestion -->
+  <path d="M200 500 L200 280 L280 280 L280 200 L300 160 L320 200 L320 280 L400 280 L400 500 Z" fill="#c9a84c" opacity="0.06" stroke="#c9a84c" stroke-width="0.5" stroke-opacity="0.2"/>
+  <!-- Cross on church -->
+  <line x1="300" y1="120" x2="300" y2="165" stroke="#c9a84c" stroke-width="1.5" opacity="0.25"/>
+  <line x1="285" y1="138" x2="315" y2="138" stroke="#c9a84c" stroke-width="1.5" opacity="0.25"/>
+  <!-- Couple in foreground -->
+  <circle cx="275" cy="310" r="30" fill="#c9a84c" opacity="0.3"/>
+  <ellipse cx="275" cy="390" rx="28" ry="70" fill="#c9a84c" opacity="0.22"/>
+  <circle cx="325" cy="318" r="25" fill="#c9a84c" opacity="0.3"/>
+  <path d="M325 343 C300 353 292 395 294 470 L356 470 C358 395 350 353 325 343 Z" fill="#c9a84c" opacity="0.18"/>
+  <!-- Glow behind couple -->
+  <ellipse cx="300" cy="400" rx="90" ry="100" fill="#c9a84c" opacity="0.04"/>
+  <text x="300" y="528" text-anchor="middle" font-size="13" fill="#c9a84c" opacity="0.35" font-family="Georgia,serif" font-style="italic">Momen 4</text>
+  <text x="300" y="553" text-anchor="middle" font-size="9" fill="#c9a84c" opacity="0.18" font-family="Georgia,serif" letter-spacing="4">GANTI FOTO</text>
+</svg>

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600">
+  <defs>
+    <radialGradient id="bg6" cx="40%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#1c1508"/>
+      <stop offset="100%" stop-color="#060500"/>
+    </radialGradient>
+  </defs>
+  <rect width="600" height="600" fill="url(#bg6)"/>
+  <pattern id="d6" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
+    <circle cx="12" cy="12" r="0.7" fill="#c9a84c" opacity="0.08"/>
+  </pattern>
+  <rect width="600" height="600" fill="url(#d6)"/>
+  <rect x="24" y="24" width="552" height="552" fill="none" stroke="#c9a84c" stroke-width="0.8" opacity="0.3"/>
+  <path d="M24 24 L24 60 M24 24 L60 24" stroke="#c9a84c" stroke-width="1.2" fill="none" opacity="0.5"/>
+  <path d="M576 24 L576 60 M576 24 L540 24" stroke="#c9a84c" stroke-width="1.2" fill="none" opacity="0.5"/>
+  <path d="M24 576 L24 540 M24 576 L60 576" stroke="#c9a84c" stroke-width="1.2" fill="none" opacity="0.5"/>
+  <path d="M576 576 L576 540 M576 576 L540 576" stroke="#c9a84c" stroke-width="1.2" fill="none" opacity="0.5"/>
+  <!-- Close-up / rings / detail suggestion -->
+  <!-- Two rings interlinked -->
+  <circle cx="265" cy="290" r="60" fill="none" stroke="#c9a84c" stroke-width="2" opacity="0.3"/>
+  <circle cx="265" cy="290" r="50" fill="none" stroke="#c9a84c" stroke-width="0.5" opacity="0.15"/>
+  <circle cx="335" cy="290" r="60" fill="none" stroke="#c9a84c" stroke-width="2" opacity="0.3"/>
+  <circle cx="335" cy="290" r="50" fill="none" stroke="#c9a84c" stroke-width="0.5" opacity="0.15"/>
+  <!-- Inner glow -->
+  <ellipse cx="300" cy="290" rx="40" ry="40" fill="#c9a84c" opacity="0.04"/>
+  <!-- Diamond above -->
+  <polygon points="300,160 320,195 300,230 280,195" fill="none" stroke="#c9a84c" stroke-width="1" opacity="0.3"/>
+  <polygon points="300,175 315,195 300,215 285,195" fill="#c9a84c" opacity="0.08"/>
+  <line x1="300" y1="230" x2="300" y2="260" stroke="#c9a84c" stroke-width="0.6" opacity="0.2"/>
+  <!-- Ornamental flourish -->
+  <path d="M160 290 Q200 270 240 290" fill="none" stroke="#c9a84c" stroke-width="0.8" opacity="0.2"/>
+  <path d="M360 290 Q400 270 440 290" fill="none" stroke="#c9a84c" stroke-width="0.8" opacity="0.2"/>
+  <text x="300" y="400" text-anchor="middle" font-size="11" fill="#c9a84c" opacity="0.25" font-family="Georgia,serif" letter-spacing="4">Alan ✦ Kris</text>
+  <text x="300" y="490" text-anchor="middle" font-size="13" fill="#c9a84c" opacity="0.35" font-family="Georgia,serif" font-style="italic">Momen 6</text>
+  <text x="300" y="515" text-anchor="middle" font-size="9" fill="#c9a84c" opacity="0.18" font-family="Georgia,serif" letter-spacing="4">GANTI FOTO</text>
+</svg>
