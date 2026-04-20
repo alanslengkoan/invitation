@@ -166,7 +166,8 @@ const musicBtn = document.getElementById('musicToggle');
 let isPlaying = false;
 
 function tryPlayMusic() {
-  if (!audio.src || audio.src === window.location.href) return;
+  var src = audio.querySelector('source');
+  if (!src || !src.getAttribute('src')) return;
   audio.volume = 0;
   audio.play()
     .then(() => {
