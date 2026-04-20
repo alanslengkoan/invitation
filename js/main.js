@@ -423,6 +423,76 @@ function copyRek(nomor, toastId) {
   setTimeout(function() { toast.style.display = 'none'; }, 2500);
 }
 
+// ===== LIGHTBOX =====
+(function() {
+  var lb       = document.getElementById('lightbox');
+  var lbImg    = document.getElementById('lbImg');
+  var lbClose  = document.getElementById('lbClose');
+  var lbPrev   = document.getElementById('lbPrev');
+  var lbNext   = document.getElementById('lbNext');
+  var lbCount  = document.getElementById('lbCounter');
+  var backdrop = lb.querySelector('.lb-backdrop');
+
+  var images = [];
+  var current = 0;
+
+  document.querySelectorAll('.gallery-item[data-index] img').forEach(function(img) {
+    images.push({ src: img.src, alt: img.alt });
+  });
+
+  function openLightbox(idx) {
+    current = idx;
+    showImage(current);
+    lb.classList.add('open');
+    lb.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    lb.classList.remove('open');
+    lb.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  function showImage(idx) {
+    lbImg.classList.add('lb-fade');
+    setTimeout(function() {
+      lbImg.src = images[idx].src;
+      lbImg.alt = images[idx].alt;
+      lbCount.textContent = (idx + 1) + ' / ' + images.length;
+      lbImg.classList.remove('lb-fade');
+    }, 200);
+  }
+
+  function prevImage() {
+    current = (current - 1 + images.length) % images.length;
+    showImage(current);
+  }
+
+  function nextImage() {
+    current = (current + 1) % images.length;
+    showImage(current);
+  }
+
+  document.querySelectorAll('.gallery-item[data-index]').forEach(function(item) {
+    item.addEventListener('click', function() {
+      openLightbox(parseInt(item.getAttribute('data-index')));
+    });
+  });
+
+  lbClose.addEventListener('click', closeLightbox);
+  backdrop.addEventListener('click', closeLightbox);
+  lbPrev.addEventListener('click', function(e) { e.stopPropagation(); prevImage(); });
+  lbNext.addEventListener('click', function(e) { e.stopPropagation(); nextImage(); });
+
+  document.addEventListener('keydown', function(e) {
+    if (!lb.classList.contains('open')) return;
+    if (e.key === 'Escape')     closeLightbox();
+    if (e.key === 'ArrowLeft')  prevImage();
+    if (e.key === 'ArrowRight') nextImage();
+  });
+})();
+
 // ===== FLORAL CORNER FRAME =====
 (function() {
   var frame = '<div class="floral-frame" aria-hidden="true"><i></i><i></i><i></i><i></i></div>';

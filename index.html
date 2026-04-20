@@ -235,12 +235,12 @@
       <h3 class="section-title fade-in">Momen Kami</h3>
       <p class="section-sub fade-in">Sekilas perjalanan cinta kami bersama</p>
       <div class="gallery-grid">
-        <div class="gallery-item fade-in"><img src="assets/photo1.svg" alt="Momen 1" onerror="this.parentElement.classList.add('no-img')"></div>
-        <div class="gallery-item gallery-tall fade-in"><img src="assets/photo2.svg" alt="Momen 2" onerror="this.parentElement.classList.add('no-img')"></div>
-        <div class="gallery-item fade-in"><img src="assets/photo3.svg" alt="Momen 3" onerror="this.parentElement.classList.add('no-img')"></div>
-        <div class="gallery-item fade-in"><img src="assets/photo4.svg" alt="Momen 4" onerror="this.parentElement.classList.add('no-img')"></div>
-        <div class="gallery-item gallery-wide fade-in"><img src="assets/photo5.svg" alt="Momen 5" onerror="this.parentElement.classList.add('no-img')"></div>
-        <div class="gallery-item fade-in"><img src="assets/photo6.svg" alt="Momen 6" onerror="this.parentElement.classList.add('no-img')"></div>
+        <div class="gallery-item fade-in" data-index="0"><img src="assets/photo1.svg" alt="Momen 1" onerror="this.parentElement.classList.add('no-img')"></div>
+        <div class="gallery-item gallery-tall fade-in" data-index="1"><img src="assets/photo2.svg" alt="Momen 2" onerror="this.parentElement.classList.add('no-img')"></div>
+        <div class="gallery-item fade-in" data-index="2"><img src="assets/photo3.svg" alt="Momen 3" onerror="this.parentElement.classList.add('no-img')"></div>
+        <div class="gallery-item fade-in" data-index="3"><img src="assets/photo4.svg" alt="Momen 4" onerror="this.parentElement.classList.add('no-img')"></div>
+        <div class="gallery-item gallery-wide fade-in" data-index="4"><img src="assets/photo5.svg" alt="Momen 5" onerror="this.parentElement.classList.add('no-img')"></div>
+        <div class="gallery-item fade-in" data-index="5"><img src="assets/photo6.svg" alt="Momen 6" onerror="this.parentElement.classList.add('no-img')"></div>
       </div>
     </div>
   </section>
@@ -442,6 +442,24 @@
   </section>
 
 </main>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" class="lightbox" aria-hidden="true">
+  <div class="lb-backdrop"></div>
+  <button class="lb-close" id="lbClose" title="Tutup">
+    <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  <button class="lb-nav lb-prev" id="lbPrev" title="Sebelumnya">
+    <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+  </button>
+  <div class="lb-img-wrap">
+    <img id="lbImg" src="" alt="">
+  </div>
+  <button class="lb-nav lb-next" id="lbNext" title="Berikutnya">
+    <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+  </button>
+  <div class="lb-counter" id="lbCounter">1 / 6</div>
+</div>
 
 <!-- FLOATING NAV -->
 <nav id="floatNav" class="float-nav" aria-label="Navigasi Cepat">
