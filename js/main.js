@@ -127,90 +127,6 @@ window.scrollTo(0, 0);
     setInterval(updateCountdown, 1000);
 })();
 
-// ===== PARTICLE SYSTEM =====
-const canvas = document.getElementById('particles');
-const ctx = canvas.getContext('2d');
-
-function resizeCanvas() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-}
-resizeCanvas();
-window.addEventListener('resize', resizeCanvas);
-
-class Particle {
-    constructor() {
-        this.reset(true);
-    }
-
-    reset(initial = false) {
-        this.x = Math.random() * canvas.width;
-        this.y = initial ? Math.random() * canvas.height : canvas.height + 10;
-        this.size = Math.random() * 1.8 + 0.4;
-        this.speedY = -(Math.random() * 0.6 + 0.2);
-        this.speedX = (Math.random() - 0.5) * 0.25;
-        this.baseOpacity = Math.random() * 0.5 + 0.15;
-        this.opacity = this.baseOpacity;
-        this.life = 0;
-        this.maxLife = Math.random() * 250 + 120;
-        this.twinkle = Math.random() * Math.PI * 2;
-        this.twinkleSpeed = Math.random() * 0.04 + 0.01;
-    }
-
-    update() {
-        this.x += this.speedX;
-        this.y += this.speedY;
-        this.life++;
-        this.twinkle += this.twinkleSpeed;
-
-        const fade = this.life < 40 ?
-            this.life / 40 :
-            this.life > this.maxLife - 40 ?
-            (this.maxLife - this.life) / 40 :
-            1;
-
-        this.opacity = this.baseOpacity * fade * (0.7 + 0.3 * Math.sin(this.twinkle));
-
-        if (this.y < -10 || this.life >= this.maxLife) this.reset(false);
-    }
-
-    draw() {
-        ctx.save();
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(201, 168, 76, ${this.opacity})`;
-        ctx.fill();
-
-        if (this.size > 1.2) {
-            ctx.beginPath();
-            ctx.arc(this.x, this.y, this.size * 2.5, 0, Math.PI * 2);
-            ctx.fillStyle = `rgba(201, 168, 76, ${this.opacity * 0.15})`;
-            ctx.fill();
-        }
-        ctx.restore();
-    }
-}
-
-const particles = [];
-const PARTICLE_COUNT = 90;
-
-for (let i = 0; i < PARTICLE_COUNT; i++) {
-    particles.push(new Particle());
-}
-
-let animFrame;
-
-function animateParticles() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    particles.forEach(p => {
-        p.update();
-        p.draw();
-    });
-    animFrame = requestAnimationFrame(animateParticles);
-}
-animateParticles();
-
-
 // ===== OPEN INVITATION =====
 const openBtn = document.getElementById('openBtn');
 const cover = document.getElementById('cover');
@@ -218,7 +134,6 @@ const mainContent = document.getElementById('mainContent');
 
 openBtn.addEventListener('click', () => {
     document.body.classList.add('scroll-unlocked');
-    cover.classList.add('fade-out');
 
     mainContent.classList.remove('hidden');
     requestAnimationFrame(() => {
@@ -227,14 +142,15 @@ openBtn.addEventListener('click', () => {
         });
     });
 
+    cover.classList.add('slide-up');
+
     setTimeout(() => {
-        cancelAnimationFrame(animFrame);
         cover.style.display = 'none';
         window.scrollTo({
             top: 0,
             behavior: 'instant'
         });
-    }, 1400);
+    }, 1100);
 
     tryPlayMusic();
     initScrollObserver();
