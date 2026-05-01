@@ -571,20 +571,22 @@ a {
 }
 
 .profil-photo-wrap {
-    width: 110px;
-    height: 110px;
+    width: 160px;
+    height: 200px;
     margin: 0 auto 1.2rem;
-    border-radius: 50%;
-    border: 1px solid rgba(201, 168, 76, 0.4);
+    border-radius: 16px;
+    border: 1.5px solid rgba(201, 168, 76, 0.4);
     overflow: hidden;
     position: relative;
     background: rgba(201, 168, 76, 0.05);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
 }
 
 .profil-photo-wrap img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center top;
 }
 
 .profil-photo-fallback {
