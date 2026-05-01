@@ -557,7 +557,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             'ls-sub': 'Sembilan tahun semesta merajut cerita ini',
             'tl-2017a-h': 'Berawal dari Percakapan Sederhana',
             'tl-2017a-p': 'Di tahun ketiga perkuliahan, semesta mulai merajut cerita kami — dari percakapan sederhana di layar, dengan alasan yang terdengar biasa, namun perlahan membawa kami saling mengenal.',
-            'tl-2017b-h': 'Pertemuan Pertama di Bazar',
+            'tl-2017b-h': 'Pertemuan Pertama',
             'tl-2017b-p': 'Pertemuan pertama di sebuah bazar kecil menjadi awal, di mana tawa terasa ringan dan percakapan mengalir tanpa jeda. Sejak saat itu, kami berjalan sebagai sahabat — saling menguatkan, saling menjaga, dalam langkah yang tenang dan sederhana.',
             'tl-2021-h': 'Dipertemukan Kembali',
             'tl-2021-p': 'Meski sempat terpisah oleh jarak dan kesibukan, cerita ini tidak benar-benar usai. Kami dipertemukan kembali dalam versi yang lebih dewasa, lebih siap — dan kali ini, kami memilih untuk berjalan ke arah yang sama.',
