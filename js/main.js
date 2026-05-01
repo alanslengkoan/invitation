@@ -628,7 +628,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             'ls-sub': 'Nine years in the making',
             'tl-2017a-h': 'It Began with a Simple Conversation',
             'tl-2017a-p': 'In our third year of college, the universe began weaving our story — from a simple exchange of messages, with an ordinary reason, yet quietly drawing us closer to each other.',
-            'tl-2017b-h': 'First Meeting at a Bazaar',
+            'tl-2017b-h': 'First Meeting',
             'tl-2017b-p': 'Our first meeting at a small bazaar was only the beginning, where laughter came easy and conversation flowed without pause. From that moment, we walked as friends — strengthening and keeping each other, in quiet and steady steps.',
             'tl-2021-h': 'Reunited',
             'tl-2021-p': 'Though briefly separated by distance and the busyness of life, this story never truly ended. We were brought back together — more mature, more ready — and this time, we chose to walk in the same direction.',
