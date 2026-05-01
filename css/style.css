@@ -989,7 +989,6 @@ blockquote cite {
 /* ===== GALLERY ===== */
 #gallery {
     background: var(--dark);
-    padding-bottom: 4rem;
 }
 
 .gallery-header {
