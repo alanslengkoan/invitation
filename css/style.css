@@ -989,33 +989,64 @@ blockquote cite {
 /* ===== GALLERY ===== */
 #gallery {
     background: var(--dark);
+    padding-bottom: 4rem;
+}
+
+.gallery-header {
+    padding: 3rem 2rem 1.5rem;
 }
 
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto;
-    gap: 6px;
-    margin-top: 2rem;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 4px;
 }
 
 .gallery-item {
     overflow: hidden;
-    aspect-ratio: 1;
     background: rgba(201, 168, 76, 0.06);
     position: relative;
     cursor: pointer;
+    min-height: 160px;
 }
 
-.gallery-item.gallery-tall {
-    grid-row: span 2;
-    aspect-ratio: unset;
+/* Row 1: 4 equal (3 cols each) */
+.gallery-item:nth-child(1),
+.gallery-item:nth-child(2),
+.gallery-item:nth-child(3),
+.gallery-item:nth-child(4) {
+    grid-column: span 3;
 }
 
+/* Row 2: wide(5) + normal(3) + normal(2) + normal(2) */
 .gallery-item.gallery-wide {
+    grid-column: span 5;
+}
+
+.gallery-item:nth-child(6) {
+    grid-column: span 3;
+}
+
+.gallery-item:nth-child(7),
+.gallery-item:nth-child(8) {
     grid-column: span 2;
-    aspect-ratio: unset;
-    min-height: 200px;
+}
+
+/* Row 3: small(2) + small(3) + medium(3) + wide(4) */
+.gallery-item:nth-child(9) {
+    grid-column: span 2;
+}
+
+.gallery-item:nth-child(10) {
+    grid-column: span 3;
+}
+
+.gallery-item:nth-child(11) {
+    grid-column: span 3;
+}
+
+.gallery-item.gallery-wide-end {
+    grid-column: span 4;
 }
 
 .gallery-item img {
@@ -2121,10 +2152,6 @@ section:not(#cover) {
         padding: 9rem 4rem;
     }
 
-    .gallery-grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
-
     .profil-grid {
         max-width: 720px;
         margin-left: auto;
@@ -2150,11 +2177,12 @@ section:not(#cover) {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .gallery-item.gallery-tall,
-    .gallery-item.gallery-wide {
-        grid-row: span 1;
+    .gallery-item,
+    .gallery-item:nth-child(n),
+    .gallery-item.gallery-wide,
+    .gallery-item.gallery-wide-end {
         grid-column: span 1;
-        aspect-ratio: 1;
+        min-height: 140px;
     }
 
     .events-grid {
