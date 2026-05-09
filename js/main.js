@@ -495,7 +495,7 @@ function copyRek(nomor, toastId) {
 // ===== FLORAL CORNER FRAME =====
 (function () {
     var frame = '<div class="floral-frame" aria-hidden="true"><i></i><i></i><i></i><i></i></div>';
-    document.querySelectorAll('section:not(#cover)').forEach(function (s) {
+    document.querySelectorAll('section:not(#cover):not(.no-floral)').forEach(function (s) {
         s.insertAdjacentHTML('afterbegin', frame);
     });
 })();
@@ -576,8 +576,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             'map-btn': 'Lihat di Peta ↗',
             'save-date-text': 'Tandai harinya agar tidak terlewat',
             'save-date-btn': 'Simpan Tanggal',
-            'gallery-title': 'Momen Kami',
-            'gallery-sub': 'Sekilas perjalanan cinta kami bersama',
             'rsvp-title': 'Konfirmasi Kehadiran',
             'rsvp-sub': 'Mohon konfirmasi kehadiran Anda sebelum 1 · 06 · 2026',
             'rsvp-ph-name': 'Nama Lengkap Anda',
@@ -600,8 +598,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             'copy-btn': 'Salin Nomor Rekening',
             'toast-bca': 'Nomor rekening BCA tersalin ✓',
             'toast-mandiri': 'Nomor rekening Mandiri tersalin ✓',
-            'qris-title': 'Atau via QRIS',
-            'qris-note': 'Scan QRIS · Berlaku untuk semua aplikasi pembayaran',
             'close-env': '— tutup amplop —',
             'gift-note': 'Kehadiran dan doa Bapak/Ibu/Saudara/i<br>adalah hadiah terbesar dan terindah bagi kami.',
             'closing-text': 'Dengan hati yang penuh syukur, kami mengucapkan terima kasih telah merayakan momen suci ini bersama kami. Kehadiran Anda adalah berkat terbesar bagi kami.',
@@ -647,8 +643,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             'map-btn': 'View on Map ↗',
             'save-date-text': 'Mark the date so you don\'t miss it',
             'save-date-btn': 'Save the Date',
-            'gallery-title': 'Our Moments',
-            'gallery-sub': 'A glimpse of our journey together',
             'rsvp-title': 'RSVP',
             'rsvp-sub': 'Please confirm your attendance before 1 · 06 · 2026',
             'rsvp-ph-name': 'Your Full Name',
@@ -671,8 +665,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             'copy-btn': 'Copy Account Number',
             'toast-bca': 'BCA account number copied ✓',
             'toast-mandiri': 'Mandiri account number copied ✓',
-            'qris-title': 'Or via QRIS',
-            'qris-note': 'Scan QRIS · Valid for all payment apps',
             'close-env': '— close envelope —',
             'gift-note': 'Your presence and prayers<br>are the greatest and most beautiful gift to us.',
             'closing-text': 'With hearts full of gratitude, we thank you for celebrating this sacred moment with us. Your presence is the greatest blessing to us.',
