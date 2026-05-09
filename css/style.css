@@ -936,6 +936,7 @@ blockquote cite {
 /* ===== GALLERY ===== */
 #gallery {
     background: var(--dark);
+    overflow: hidden;
 }
 
 
@@ -1571,6 +1572,18 @@ blockquote cite {
 .fade-in.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+.gallery-item.fade-in {
+    transform: translateX(-40px);
+}
+
+.gallery-item.fade-in:nth-child(even) {
+    transform: translateX(40px);
+}
+
+.gallery-item.fade-in.visible {
+    transform: translateX(0);
 }
 
 .timeline-item.fade-in {

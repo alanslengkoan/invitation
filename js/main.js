@@ -422,6 +422,21 @@ function copyRek(nomor, toastId) {
     }, 2500);
 }
 
+// ===== GALLERY SHUFFLE =====
+(function () {
+    var grid = document.querySelector('.gallery-grid');
+    if (!grid) return;
+    var items = Array.from(grid.children);
+    for (var i = items.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        grid.appendChild(items[j]);
+        items.splice(j, 1, items[i]);
+    }
+    grid.querySelectorAll('.gallery-item').forEach(function (item, idx) {
+        item.setAttribute('data-index', idx);
+    });
+})();
+
 // ===== LIGHTBOX =====
 (function () {
     var lb = document.getElementById('lightbox');
