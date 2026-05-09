@@ -451,10 +451,11 @@ a {
 }
 
 .hero-name {
-    font-size: clamp(2.2rem, 6vw, 4.5rem);
+    font-size: clamp(1.6rem, 5vw, 4.5rem);
     font-weight: 300;
     line-height: 1.15;
     letter-spacing: 0.03em;
+    white-space: nowrap;
     background: linear-gradient(90deg, #c9a84c 0%, #f0d78a 25%, #fff8e7 48%, #f0d78a 72%, #c9a84c 100%);
     background-size: 250% auto;
     -webkit-background-clip: text;
@@ -637,6 +638,10 @@ a {
     color: var(--off-white);
     font-style: italic;
     margin-bottom: 1.2rem;
+}
+
+.no-italic {
+    font-style: normal;
     line-height: 1.6;
 }
 
