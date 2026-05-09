@@ -43,8 +43,8 @@ body {
     overflow-y: hidden;
     line-height: 1.7;
     background-image:
-        radial-gradient(ellipse 80% 60% at 50% 0%, rgba(201, 168, 76, 0.03) 0%, transparent 70%),
-        radial-gradient(ellipse 60% 40% at 50% 100%, rgba(201, 168, 76, 0.02) 0%, transparent 60%);
+        radial-gradient(ellipse 80% 60% at 50% 0%, rgba(201, 168, 76, 0.06) 0%, transparent 70%),
+        radial-gradient(ellipse 60% 40% at 50% 100%, rgba(201, 168, 76, 0.04) 0%, transparent 60%);
 }
 
 body.scroll-unlocked {
@@ -473,7 +473,7 @@ a {
     width: 60%;
     max-width: 400px;
     height: 1px;
-    background: linear-gradient(to right, transparent, rgba(201, 168, 76, 0.25), transparent);
+    background: linear-gradient(to right, transparent, rgba(201, 168, 76, 0.4), transparent);
 }
 
 .dark-section {
@@ -504,7 +504,9 @@ a {
 /* ===== PROFIL PASANGAN ===== */
 #profil {
     background:
-        radial-gradient(ellipse 50% 50% at 50% 20%, rgba(201, 168, 76, 0.04) 0%, transparent 70%),
+        radial-gradient(ellipse 70% 50% at 50% 0%, rgba(201, 168, 76, 0.08) 0%, transparent 65%),
+        radial-gradient(ellipse 80% 80% at 0% 50%, rgba(60, 0, 30, 0.5) 0%, transparent 60%),
+        radial-gradient(ellipse 80% 80% at 100% 50%, rgba(60, 0, 30, 0.5) 0%, transparent 60%),
         var(--dark2);
 }
 
@@ -684,7 +686,9 @@ a {
 /* ===== BIBLE VERSE SECTION ===== */
 #bible-verse {
     background:
-        radial-gradient(ellipse 60% 50% at 50% 50%, rgba(201, 168, 76, 0.05) 0%, transparent 70%),
+        radial-gradient(ellipse 50% 40% at 50% 50%, rgba(201, 168, 76, 0.1) 0%, transparent 60%),
+        radial-gradient(ellipse 100% 100% at 0% 0%, rgba(50, 0, 25, 0.6) 0%, transparent 50%),
+        radial-gradient(ellipse 100% 100% at 100% 100%, rgba(50, 0, 25, 0.6) 0%, transparent 50%),
         var(--dark);
     position: relative;
     overflow: hidden;
@@ -846,8 +850,9 @@ blockquote cite {
 /* ===== EVENT DETAILS ===== */
 #events {
     background:
-        radial-gradient(ellipse 50% 60% at 30% 80%, rgba(201, 168, 76, 0.03) 0%, transparent 60%),
-        radial-gradient(ellipse 50% 60% at 70% 20%, rgba(201, 168, 76, 0.03) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 50% at 25% 80%, rgba(201, 168, 76, 0.07) 0%, transparent 55%),
+        radial-gradient(ellipse 60% 50% at 75% 20%, rgba(201, 168, 76, 0.07) 0%, transparent 55%),
+        radial-gradient(ellipse 100% 60% at 50% 100%, rgba(40, 0, 20, 0.6) 0%, transparent 50%),
         var(--dark3);
 }
 
@@ -1035,7 +1040,8 @@ blockquote cite {
 /* ===== FORMS ===== */
 #rsvp {
     background:
-        radial-gradient(ellipse 50% 50% at 50% 30%, rgba(201, 168, 76, 0.04) 0%, transparent 70%),
+        radial-gradient(ellipse 60% 50% at 50% 20%, rgba(201, 168, 76, 0.08) 0%, transparent 60%),
+        radial-gradient(ellipse 80% 80% at 100% 100%, rgba(50, 0, 25, 0.5) 0%, transparent 50%),
         var(--dark3);
 }
 
@@ -1216,7 +1222,9 @@ blockquote cite {
 /* ===== DIGITAL ENVELOPE / GIFT ===== */
 #gift {
     background:
-        radial-gradient(ellipse 40% 40% at 50% 50%, rgba(201, 168, 76, 0.04) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 40% at 50% 40%, rgba(201, 168, 76, 0.08) 0%, transparent 55%),
+        radial-gradient(ellipse 80% 80% at 0% 100%, rgba(50, 0, 25, 0.5) 0%, transparent 50%),
+        radial-gradient(ellipse 80% 80% at 100% 0%, rgba(50, 0, 25, 0.5) 0%, transparent 50%),
         var(--dark2);
 }
 
