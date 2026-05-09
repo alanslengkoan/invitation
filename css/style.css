@@ -42,6 +42,9 @@ body {
     overflow-x: hidden;
     overflow-y: hidden;
     line-height: 1.7;
+    background-image:
+        radial-gradient(ellipse 80% 60% at 50% 0%, rgba(201, 168, 76, 0.03) 0%, transparent 70%),
+        radial-gradient(ellipse 60% 40% at 50% 100%, rgba(201, 168, 76, 0.02) 0%, transparent 60%);
 }
 
 body.scroll-unlocked {
@@ -458,6 +461,19 @@ a {
 /* ===== SHARED SECTION STYLES ===== */
 .section-padded {
     padding: 7rem 2rem;
+    position: relative;
+}
+
+.section-padded::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    max-width: 400px;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(201, 168, 76, 0.25), transparent);
 }
 
 .dark-section {
@@ -487,7 +503,9 @@ a {
 
 /* ===== PROFIL PASANGAN ===== */
 #profil {
-    background: var(--dark2);
+    background:
+        radial-gradient(ellipse 50% 50% at 50% 20%, rgba(201, 168, 76, 0.04) 0%, transparent 70%),
+        var(--dark2);
 }
 
 .profil-grid {
@@ -665,7 +683,9 @@ a {
 
 /* ===== BIBLE VERSE SECTION ===== */
 #bible-verse {
-    background: var(--dark);
+    background:
+        radial-gradient(ellipse 60% 50% at 50% 50%, rgba(201, 168, 76, 0.05) 0%, transparent 70%),
+        var(--dark);
     position: relative;
     overflow: hidden;
 }
@@ -825,7 +845,10 @@ blockquote cite {
 
 /* ===== EVENT DETAILS ===== */
 #events {
-    background: var(--dark3);
+    background:
+        radial-gradient(ellipse 50% 60% at 30% 80%, rgba(201, 168, 76, 0.03) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 60% at 70% 20%, rgba(201, 168, 76, 0.03) 0%, transparent 60%),
+        var(--dark3);
 }
 
 .events-grid {
@@ -1011,7 +1034,9 @@ blockquote cite {
 
 /* ===== FORMS ===== */
 #rsvp {
-    background: var(--dark3);
+    background:
+        radial-gradient(ellipse 50% 50% at 50% 30%, rgba(201, 168, 76, 0.04) 0%, transparent 70%),
+        var(--dark3);
 }
 
 .rsvp-form,
@@ -1190,7 +1215,9 @@ blockquote cite {
 
 /* ===== DIGITAL ENVELOPE / GIFT ===== */
 #gift {
-    background: var(--dark2);
+    background:
+        radial-gradient(ellipse 40% 40% at 50% 50%, rgba(201, 168, 76, 0.04) 0%, transparent 60%),
+        var(--dark2);
 }
 
 .amplop-sub {
