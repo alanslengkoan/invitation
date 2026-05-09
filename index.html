@@ -554,6 +554,19 @@
     </audio>
 
     <script src="js/main.js"></script>
+    <script>
+        // Disable right-click
+        document.addEventListener('contextmenu', function (e) { e.preventDefault(); });
+        // Disable keyboard shortcuts for DevTools
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'F12') { e.preventDefault(); return false; }
+            if (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'C')) { e.preventDefault(); return false; }
+            if (e.ctrlKey && e.key === 'u') { e.preventDefault(); return false; }
+        });
+        // Disable text selection
+        document.body.style.userSelect = 'none';
+        document.body.style.webkitUserSelect = 'none';
+    </script>
 </body>
 
 </html>
