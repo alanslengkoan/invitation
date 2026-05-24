@@ -1892,55 +1892,76 @@ blockquote cite {
     animation: fadeSlideIn 0.9s ease forwards;
 }
 
-.pre-cross {
-    font-size: 1.4rem;
-    color: var(--gold);
-    margin-bottom: 1.8rem;
-    animation: crossGlow 2.2s ease-in-out infinite;
-    display: block;
+.pre-monogram {
+    position: relative;
+    width: clamp(160px, 40vw, 220px);
+    height: clamp(160px, 40vw, 220px);
+    margin: 0 auto 1.5rem;
 }
 
-@keyframes crossGlow {
-
-    0%,
-    100% {
-        text-shadow: 0 0 8px rgba(201, 168, 76, 0.3);
-    }
-
-    50% {
-        text-shadow: 0 0 30px rgba(201, 168, 76, 0.8), 0 0 60px rgba(201, 168, 76, 0.3);
-    }
+.pre-ring {
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 0 8px rgba(201, 168, 76, 0.2));
+    animation: preGlow 3s ease-in-out infinite;
 }
 
-.pre-names {
+.pre-ring-rotate {
+    transform-origin: 100px 100px;
+    animation: preRingSpin 20s linear infinite;
+}
+
+@keyframes preRingSpin {
+    to { transform: rotate(360deg); }
+}
+
+@keyframes preGlow {
+    0%, 100% { filter: drop-shadow(0 0 6px rgba(201, 168, 76, 0.15)); }
+    50% { filter: drop-shadow(0 0 20px rgba(201, 168, 76, 0.35)); }
+}
+
+.pre-logo-text {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem;
+}
+
+.pre-letter {
     font-family: var(--font-serif);
-    font-size: clamp(2.2rem, 7vw, 3.8rem);
+    font-size: clamp(2.8rem, 8vw, 4.2rem);
     font-weight: 300;
     font-style: italic;
-    letter-spacing: 0.08em;
     background: linear-gradient(90deg, #c9a84c 0%, #f0d78a 25%, #fff8e7 48%, #f0d78a 72%, #c9a84c 100%);
     background-size: 250% auto;
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: shimmerText 3s linear infinite;
-    margin-bottom: 0.6rem;
+    animation: shimmerText 4s linear infinite;
 }
 
-.pre-names span {
-    font-style: normal;
+.pre-amp {
+    font-family: var(--font-serif);
+    font-size: clamp(1.4rem, 4vw, 2rem);
+    font-weight: 300;
+    color: var(--gold);
+    opacity: 0.6;
+    margin: 0 0.1rem;
+    padding-top: 0.3rem;
 }
 
 .pre-date {
-    font-size: 1.1rem;
+    font-size: 0.85rem;
     font-weight: 600;
     letter-spacing: 0.5em;
-    color: rgba(201, 168, 76, 0.6);
-    margin-bottom: 2.8rem;
+    color: rgba(201, 168, 76, 0.5);
+    margin-bottom: 2rem;
 }
 
 .pre-bar {
-    width: 160px;
+    width: 120px;
     height: 1px;
     background: rgba(201, 168, 76, 0.12);
     margin: 0 auto;
