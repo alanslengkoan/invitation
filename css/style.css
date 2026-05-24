@@ -1116,6 +1116,13 @@ blockquote cite {
 }
 
 
+.event-address {
+    color: var(--text-dark-muted);
+    font-size: 0.88rem;
+    font-style: italic;
+    margin-top: 0.3rem;
+}
+
 .map-btn {
     display: inline-block;
     margin-top: 1.8rem;
