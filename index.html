@@ -28,13 +28,18 @@
     <!-- ===== COVER / OPENING ===== -->
     <section id="cover">
         <div class="cover-bg">
-            <img src="assets/cover/hero.jpg" alt="Alan &amp; Kris">
+            <img src="assets/cover/bg-cover.png" alt="Background">
         </div>
         <div class="cover-gradient"></div>
         <div class="cover-content">
             <div class="cover-title-area">
                 <p class="wedding-label">The Wedding of</p>
                 <h1 class="couple-names">Alan<span class="amp"> &amp; </span>Kris</h1>
+            </div>
+            <div class="cover-photo-frame">
+                <div class="cover-photo-border">
+                    <img src="assets/cover/hero.jpg" alt="Alan &amp; Kris">
+                </div>
             </div>
             <div class="cover-footer">
                 <div class="guest-label" id="guestLabel">
@@ -51,23 +56,23 @@
 
         <!-- HERO -->
         <section id="hero">
-            <div class="hero-slider">
-                <div class="hero-slide active">
-                    <img src="assets/hero/slide1.png" alt="Alan &amp; Kris" onerror="this.style.display='none'">
-                </div>
-                <div class="hero-slide">
-                    <img src="assets/hero/slide2.png" alt="Alan &amp; Kris" onerror="this.style.display='none'">
-                </div>
-                <div class="hero-slide">
-                    <img src="assets/hero/slide3.png" alt="Alan &amp; Kris" onerror="this.style.display='none'">
-                </div>
-                <div class="hero-dots">
-                    <span class="hero-dot active"></span>
-                    <span class="hero-dot"></span>
-                    <span class="hero-dot"></span>
-                </div>
+            <div class="hero-bg">
+                <img src="assets/hero/bg-hero.png" alt="Background">
             </div>
             <div class="hero-overlay"></div>
+            <!-- Birds -->
+            <div class="hero-birds">
+                <span class="bird bird-1"></span>
+                <span class="bird bird-2"></span>
+                <span class="bird bird-3"></span>
+                <span class="bird bird-4"></span>
+                <span class="bird bird-5"></span>
+            </div>
+            <!-- Sparkles -->
+            <span class="hero-sparkle sparkle-1"></span>
+            <span class="hero-sparkle sparkle-2"></span>
+            <span class="hero-sparkle sparkle-3"></span>
+            <span class="hero-sparkle sparkle-4"></span>
             <div class="hero-content">
                 <p class="grace-text" data-i18n="grace-text">Dengan anugerah Tuhan, kami dipersatukan dalam ikatan suci
                     pernikahan</p>
@@ -77,6 +82,24 @@
                     <span class="ornament-line"></span>
                 </div>
                 <h2 class="hero-name">Kristina</h2>
+                <div class="hero-photo-slider">
+                    <div class="hero-photo-frame">
+                        <div class="hero-photo-slide active">
+                            <img src="assets/hero/slide1.png" alt="Alan &amp; Kris">
+                        </div>
+                        <div class="hero-photo-slide">
+                            <img src="assets/hero/slide2.png" alt="Alan &amp; Kris">
+                        </div>
+                        <div class="hero-photo-slide">
+                            <img src="assets/hero/slide3.png" alt="Alan &amp; Kris">
+                        </div>
+                    </div>
+                    <div class="hero-dots">
+                        <span class="hero-dot active"></span>
+                        <span class="hero-dot"></span>
+                        <span class="hero-dot"></span>
+                    </div>
+                </div>
                 <div class="scroll-hint">
                     <span>↓</span>
                 </div>
@@ -554,7 +577,7 @@
     </audio>
 
     <script src="js/main.js"></script>
-    <script>
+    <!--<script>
         // Disable right-click
         document.addEventListener('contextmenu', function (e) { e.preventDefault(); });
         // Disable keyboard shortcuts for DevTools
@@ -566,7 +589,7 @@
         // Disable text selection
         document.body.style.userSelect = 'none';
         document.body.style.webkitUserSelect = 'none';
-    </script>
+    </script>-->
 </body>
 
 </html>
