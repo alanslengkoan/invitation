@@ -1937,7 +1937,7 @@ blockquote cite {
 
 .pre-mono-branch {
     opacity: 0;
-    transform-origin: 40px 168px;
+    transform-origin: 52px 178px;
     animation: preBranchIn 1.2s ease 1.1s forwards;
 }
 

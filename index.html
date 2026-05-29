@@ -37,8 +37,8 @@
 
                     <!-- Monogram letters A & K, intertwined -->
                     <g class="pre-mono-letters" font-family="'Cormorant Garamond', 'EB Garamond', Georgia, serif" fill="url(#goldGrad)">
-                        <text x="78" y="128" text-anchor="middle" font-size="92" font-weight="400" font-style="normal">A</text>
-                        <text x="122" y="132" text-anchor="middle" font-size="96" font-weight="400" font-style="italic">K</text>
+                        <text x="122" y="136" text-anchor="middle" font-size="96" font-weight="400" font-style="italic">K</text>
+                        <text x="78" y="120" text-anchor="middle" font-size="92" font-weight="400" font-style="normal">A</text>
                     </g>
 
                     <!-- Decorative flourish swash that crosses A & K (mimics interlocked script) -->
@@ -46,19 +46,24 @@
                           d="M62 108 C 78 92, 96 122, 112 104 C 128 88, 142 116, 132 124"
                           fill="none" stroke="url(#goldGradSoft)" stroke-width="1.2" stroke-linecap="round"/>
 
-                    <!-- Olive / leaf branch at lower-left, crossing the ring -->
-                    <g class="pre-mono-branch" stroke="url(#goldGradSoft)" fill="url(#goldGradSoft)" stroke-linecap="round">
-                        <!-- main stem -->
-                        <path d="M40 168 C 52 150, 64 138, 78 132" fill="none" stroke-width="1"/>
-                        <!-- leaves (paired ovals along stem) -->
-                        <ellipse cx="46" cy="156" rx="5" ry="2.2" transform="rotate(-50 46 156)" opacity="0.85"/>
-                        <ellipse cx="54" cy="162" rx="6" ry="2.4" transform="rotate(35 54 162)" opacity="0.85"/>
-                        <ellipse cx="56" cy="146" rx="6" ry="2.4" transform="rotate(-40 56 146)" opacity="0.9"/>
-                        <ellipse cx="64" cy="152" rx="6.5" ry="2.5" transform="rotate(30 64 152)" opacity="0.9"/>
-                        <ellipse cx="66" cy="138" rx="6" ry="2.3" transform="rotate(-35 66 138)" opacity="0.95"/>
-                        <ellipse cx="74" cy="142" rx="6" ry="2.3" transform="rotate(28 74 142)" opacity="0.95"/>
-                        <!-- tip bud -->
-                        <circle cx="40" cy="168" r="1.4"/>
+                    <!-- Olive / leaf branch — curves along inner-left of circle, tip near base of A -->
+                    <g class="pre-mono-branch" fill="url(#goldGradSoft)" stroke="url(#goldGradSoft)" stroke-linecap="round" stroke-linejoin="round">
+                        <!-- main stem (S-curve hugging inner-left of circle) -->
+                        <path d="M52 178 C 28 168, 24 132, 80 132" fill="none" stroke-width="0.9" opacity="0.9"/>
+                        <!-- tip bud at base of stem -->
+                        <circle cx="52" cy="178" r="1.5" stroke="none"/>
+
+                        <!-- Outer-side leaves (left of stem, pointing outward-left) -->
+                        <ellipse cx="36" cy="172" rx="5" ry="1.6" transform="rotate(-30 36 172)" stroke="none"/>
+                        <ellipse cx="28" cy="158" rx="5.5" ry="1.7" transform="rotate(-5 28 158)" stroke="none"/>
+                        <ellipse cx="28" cy="142" rx="5.5" ry="1.7" transform="rotate(20 28 142)" stroke="none"/>
+                        <ellipse cx="38" cy="128" rx="5" ry="1.6" transform="rotate(55 38 128)" stroke="none"/>
+
+                        <!-- Inner-side leaves (right of stem, pointing toward letters) -->
+                        <ellipse cx="46" cy="164" rx="4.6" ry="1.5" transform="rotate(60 46 164)" stroke="none" opacity="0.9"/>
+                        <ellipse cx="44" cy="148" rx="4.6" ry="1.5" transform="rotate(85 44 148)" stroke="none" opacity="0.9"/>
+                        <ellipse cx="52" cy="134" rx="4.6" ry="1.5" transform="rotate(115 52 134)" stroke="none" opacity="0.9"/>
+                        <ellipse cx="68" cy="130" rx="4.4" ry="1.4" transform="rotate(150 68 130)" stroke="none" opacity="0.9"/>
                     </g>
                 </svg>
             </div>
