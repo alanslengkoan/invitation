@@ -19,37 +19,48 @@
         <div class="pre-inner">
             <div class="pre-monogram">
                 <svg class="pre-ring" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="100" cy="100" r="90" fill="none" stroke="rgba(201,168,76,0.15)" stroke-width="0.5"/>
-                    <circle cx="100" cy="100" r="82" fill="none" stroke="rgba(201,168,76,0.3)" stroke-width="0.8"/>
-                    <circle cx="100" cy="100" r="80" fill="none" stroke="rgba(201,168,76,0.1)" stroke-width="0.3"/>
-                    <!-- Ornamental dashes on outer ring -->
-                    <circle cx="100" cy="100" r="90" fill="none" stroke="url(#goldGrad)" stroke-width="1" stroke-dasharray="4 12" class="pre-ring-rotate"/>
-                    <!-- Corner flourishes -->
-                    <path d="M100 12 Q100 6 94 10" fill="none" stroke="rgba(201,168,76,0.5)" stroke-width="0.8"/>
-                    <path d="M100 12 Q100 6 106 10" fill="none" stroke="rgba(201,168,76,0.5)" stroke-width="0.8"/>
-                    <path d="M100 188 Q100 194 94 190" fill="none" stroke="rgba(201,168,76,0.5)" stroke-width="0.8"/>
-                    <path d="M100 188 Q100 194 106 190" fill="none" stroke="rgba(201,168,76,0.5)" stroke-width="0.8"/>
-                    <path d="M12 100 Q6 100 10 94" fill="none" stroke="rgba(201,168,76,0.5)" stroke-width="0.8"/>
-                    <path d="M12 100 Q6 100 10 106" fill="none" stroke="rgba(201,168,76,0.5)" stroke-width="0.8"/>
-                    <path d="M188 100 Q194 100 190 94" fill="none" stroke="rgba(201,168,76,0.5)" stroke-width="0.8"/>
-                    <path d="M188 100 Q194 100 190 106" fill="none" stroke="rgba(201,168,76,0.5)" stroke-width="0.8"/>
-                    <!-- Small diamonds at cardinal points -->
-                    <polygon points="100,8 103,12 100,16 97,12" fill="rgba(201,168,76,0.4)"/>
-                    <polygon points="100,184 103,188 100,192 97,188" fill="rgba(201,168,76,0.4)"/>
-                    <polygon points="8,100 12,97 16,100 12,103" fill="rgba(201,168,76,0.4)"/>
-                    <polygon points="184,100 188,97 192,100 188,103" fill="rgba(201,168,76,0.4)"/>
                     <defs>
                         <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
                             <stop offset="0%" stop-color="#c9a84c"/>
                             <stop offset="50%" stop-color="#f0d78a"/>
                             <stop offset="100%" stop-color="#c9a84c"/>
                         </linearGradient>
+                        <linearGradient id="goldGradSoft" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#b8923f"/>
+                            <stop offset="50%" stop-color="#e6c875"/>
+                            <stop offset="100%" stop-color="#b8923f"/>
+                        </linearGradient>
                     </defs>
+
+                    <!-- Outer thin circle (open at top to give airy feel like reference) -->
+                    <circle cx="100" cy="100" r="84" fill="none" stroke="url(#goldGrad)" stroke-width="1.1" stroke-linecap="round" stroke-dasharray="500 30" stroke-dashoffset="-15"/>
+
+                    <!-- Monogram letters A & K, intertwined -->
+                    <g class="pre-mono-letters" font-family="'Cormorant Garamond', 'EB Garamond', Georgia, serif" fill="url(#goldGrad)">
+                        <text x="78" y="128" text-anchor="middle" font-size="92" font-weight="400" font-style="normal">A</text>
+                        <text x="122" y="132" text-anchor="middle" font-size="96" font-weight="400" font-style="italic">K</text>
+                    </g>
+
+                    <!-- Decorative flourish swash that crosses A & K (mimics interlocked script) -->
+                    <path class="pre-mono-swash"
+                          d="M62 108 C 78 92, 96 122, 112 104 C 128 88, 142 116, 132 124"
+                          fill="none" stroke="url(#goldGradSoft)" stroke-width="1.2" stroke-linecap="round"/>
+
+                    <!-- Olive / leaf branch at lower-left, crossing the ring -->
+                    <g class="pre-mono-branch" stroke="url(#goldGradSoft)" fill="url(#goldGradSoft)" stroke-linecap="round">
+                        <!-- main stem -->
+                        <path d="M40 168 C 52 150, 64 138, 78 132" fill="none" stroke-width="1"/>
+                        <!-- leaves (paired ovals along stem) -->
+                        <ellipse cx="46" cy="156" rx="5" ry="2.2" transform="rotate(-50 46 156)" opacity="0.85"/>
+                        <ellipse cx="54" cy="162" rx="6" ry="2.4" transform="rotate(35 54 162)" opacity="0.85"/>
+                        <ellipse cx="56" cy="146" rx="6" ry="2.4" transform="rotate(-40 56 146)" opacity="0.9"/>
+                        <ellipse cx="64" cy="152" rx="6.5" ry="2.5" transform="rotate(30 64 152)" opacity="0.9"/>
+                        <ellipse cx="66" cy="138" rx="6" ry="2.3" transform="rotate(-35 66 138)" opacity="0.95"/>
+                        <ellipse cx="74" cy="142" rx="6" ry="2.3" transform="rotate(28 74 142)" opacity="0.95"/>
+                        <!-- tip bud -->
+                        <circle cx="40" cy="168" r="1.4"/>
+                    </g>
                 </svg>
-                <div class="pre-logo-text">
-                    <span class="pre-letter">A</span>
-                    <span class="pre-letter">K</span>
-                </div>
             </div>
             <div class="pre-date">26 · 06 · 2026</div>
             <div class="pre-bar">
