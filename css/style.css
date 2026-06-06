@@ -2424,6 +2424,26 @@ section:not(#cover) {
 
 /* --- Tablet & Mobile (≤768px) --- */
 @media (max-width: 768px) {
+    .cover-content {
+        padding: 2.5rem 1.5rem 2.5rem;
+    }
+
+    .cover-photo-frame {
+        max-height: 40vh;
+    }
+
+    .cover-footer {
+        gap: 1.4rem;
+    }
+
+    .open-btn {
+        margin-top: 0;
+        width: 100%;
+        max-width: 360px;
+        box-sizing: border-box;
+        padding: 1rem 1.5rem;
+    }
+
     .section-padded {
         padding: 5rem 1.5rem;
     }
