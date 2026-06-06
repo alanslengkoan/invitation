@@ -294,22 +294,50 @@ a {
 
 
 .guest-card {
+    position: relative;
     width: 100%;
     max-width: 360px;
     margin: 0 auto;
-    padding: 1.8rem 1.6rem 2rem;
+    padding: 2.2rem 1.8rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    border-radius: 22px;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(201, 168, 76, 0.22);
+    border-radius: 4px;
+    background:
+        linear-gradient(150deg,
+            rgba(26, 4, 14, 0.78) 0%,
+            rgba(13, 2, 7, 0.85) 50%,
+            rgba(26, 4, 14, 0.78) 100%);
+    border: 1px solid rgba(201, 168, 76, 0.45);
     box-shadow:
-        0 10px 40px rgba(0, 0, 0, 0.28),
-        inset 0 0 30px rgba(201, 168, 76, 0.04);
-    -webkit-backdrop-filter: blur(14px);
-    backdrop-filter: blur(14px);
+        0 12px 45px rgba(0, 0, 0, 0.4),
+        inset 0 0 40px rgba(201, 168, 76, 0.05);
+}
+
+/* inner gold frame */
+.guest-card::before {
+    content: '';
+    position: absolute;
+    inset: 7px;
+    border: 1px solid rgba(201, 168, 76, 0.28);
+    border-radius: 2px;
+    pointer-events: none;
+}
+
+/* decorative ornament */
+.guest-card::after {
+    content: '\2766';
+    position: absolute;
+    top: -0.7em;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0 0.5rem;
+    font-size: 1.1rem;
+    line-height: 1;
+    color: var(--gold);
+    background: #0a0004;
+    text-shadow: 0 0 10px rgba(201, 168, 76, 0.5);
 }
 
 .guest-yth {
@@ -2470,8 +2498,8 @@ section:not(#cover) {
     }
 
     .guest-card {
-        padding: 1.3rem 1.2rem 1.5rem;
-        border-radius: 18px;
+        padding: 1.6rem 1.3rem;
+        border-radius: 4px;
     }
 
     .guest-honorific {
