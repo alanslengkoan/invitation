@@ -293,28 +293,71 @@ a {
 }
 
 
-.guest-label {
-    margin-top: 2rem;
+.guest-card {
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+    padding: 1.8rem 1.6rem 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.3rem;
+    text-align: center;
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(201, 168, 76, 0.22);
+    box-shadow:
+        0 10px 40px rgba(0, 0, 0, 0.28),
+        inset 0 0 30px rgba(201, 168, 76, 0.04);
+    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(14px);
 }
 
-.guest-to {
-    font-size: 0.68rem;
+.guest-yth {
+    font-size: 0.72rem;
     letter-spacing: 0.4em;
     text-transform: uppercase;
-    color: rgba(201, 168, 76, 0.5);
+    color: rgba(201, 168, 76, 0.75);
+    margin-bottom: 0.3rem;
 }
 
-.guest-name {
-    font-size: 1.25rem;
+.guest-honorific {
+    font-size: 0.88rem;
     font-style: italic;
     font-weight: 300;
+    color: var(--rose-muted);
+    margin-bottom: 0.9rem;
+}
+
+.guest-card .guest-name {
+    font-family: var(--font-serif);
+    font-size: clamp(1.6rem, 6vw, 2.2rem);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
     color: var(--gold-light);
-    letter-spacing: 0.05em;
     text-shadow: 0 0 18px rgba(201, 168, 76, 0.3);
+    margin: 0.1rem 0 0.9rem;
+}
+
+.guest-place {
+    font-size: 0.95rem;
+    font-weight: 300;
+    color: var(--off-white);
+    letter-spacing: 0.05em;
+}
+
+.guest-apology {
+    margin-top: 1rem;
+    padding-top: 0.9rem;
+    border-top: 1px solid rgba(201, 168, 76, 0.18);
+    font-size: 0.7rem;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+    color: var(--rose-muted);
+    max-width: 260px;
 }
 
 .open-btn {
@@ -2424,6 +2467,19 @@ section:not(#cover) {
     .open-btn {
         letter-spacing: 0.2em;
         padding: 0.9rem 2rem;
+    }
+
+    .guest-card {
+        padding: 1.3rem 1.2rem 1.5rem;
+        border-radius: 18px;
+    }
+
+    .guest-honorific {
+        margin-bottom: 0.6rem;
+    }
+
+    .guest-card .guest-name {
+        margin: 0.1rem 0 0.6rem;
     }
 
 }
