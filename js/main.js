@@ -385,6 +385,7 @@ function openEnvelope() {
     setTimeout(function () {
         front.classList.add('env-hidden');
         content.classList.add('env-open');
+        flap.style.display = 'none';
         wrap.style.cursor = 'default';
     }, 420);
 }
@@ -398,6 +399,7 @@ function closeEnvelope(e) {
     var wrap = document.getElementById('envWrap');
     content.classList.remove('env-open');
     front.classList.remove('env-hidden');
+    flap.style.display = 'block';
     flap.style.transform = 'rotateX(0deg)';
     flap.style.opacity = '1';
     wrap.style.cursor = 'pointer';
