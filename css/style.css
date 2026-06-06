@@ -296,9 +296,9 @@ a {
 .guest-card {
     position: relative;
     width: 100%;
-    max-width: 360px;
+    max-width: 300px;
     margin: 0 auto;
-    padding: 2.2rem 1.8rem;
+    padding: 1.6rem 1.4rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -341,51 +341,51 @@ a {
 }
 
 .guest-yth {
-    font-size: 0.72rem;
-    letter-spacing: 0.4em;
+    font-size: 0.62rem;
+    letter-spacing: 0.35em;
     text-transform: uppercase;
     color: rgba(201, 168, 76, 0.75);
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.25rem;
 }
 
 .guest-honorific {
-    font-size: 0.88rem;
+    font-size: 0.78rem;
     font-style: italic;
     font-weight: 300;
     color: var(--rose-muted);
-    margin-bottom: 0.9rem;
+    margin-bottom: 0.6rem;
 }
 
 .guest-card .guest-name {
     font-family: var(--font-serif);
-    font-size: clamp(1.6rem, 6vw, 2.2rem);
+    font-size: clamp(1.35rem, 5vw, 1.8rem);
     font-style: normal;
     font-weight: 400;
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: var(--gold-light);
     text-shadow: 0 0 18px rgba(201, 168, 76, 0.3);
-    margin: 0.1rem 0 0.9rem;
+    margin: 0.1rem 0 0.6rem;
 }
 
 .guest-place {
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     font-weight: 300;
     color: var(--off-white);
     letter-spacing: 0.05em;
 }
 
 .guest-apology {
-    margin-top: 1rem;
-    padding-top: 0.9rem;
+    margin-top: 0.8rem;
+    padding-top: 0.7rem;
     border-top: 1px solid rgba(201, 168, 76, 0.18);
-    font-size: 0.7rem;
+    font-size: 0.62rem;
     font-style: italic;
     font-weight: 300;
-    line-height: 1.5;
+    line-height: 1.45;
     letter-spacing: 0.03em;
     color: var(--rose-muted);
-    max-width: 260px;
+    max-width: 220px;
 }
 
 .open-btn {
@@ -2439,9 +2439,9 @@ section:not(#cover) {
     .open-btn {
         margin-top: 0;
         width: 100%;
-        max-width: 360px;
+        max-width: 300px;
         box-sizing: border-box;
-        padding: 1rem 1.5rem;
+        padding: 0.9rem 1.5rem;
     }
 
     .section-padded {
@@ -2518,7 +2518,7 @@ section:not(#cover) {
     }
 
     .guest-card {
-        padding: 1.6rem 1.3rem;
+        padding: 1.4rem 1.2rem;
         border-radius: 4px;
     }
 
