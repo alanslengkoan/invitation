@@ -174,7 +174,8 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
+    gap: 1.6rem;
+    margin-top: 1.6rem;
     width: 100%;
     max-width: 360px;
 }
@@ -389,7 +390,7 @@ a {
 }
 
 .open-btn {
-    margin-top: 2.2rem;
+    margin-top: 0;
     padding: 1rem 3.5rem;
     background: transparent;
     border: 1px solid var(--gold);
