@@ -714,20 +714,35 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             var key = el.getAttribute('data-i18n-ph');
             if (d[key] !== undefined) el.placeholder = d[key];
         });
+        var nextLabel = lang === 'id' ? 'EN' : 'ID';
         var btn = document.getElementById('langToggle');
-        if (btn) btn.textContent = lang === 'id' ? 'EN' : 'ID';
+        if (btn) btn.textContent = nextLabel;
+        var coverLabel = document.getElementById('coverLangLabel');
+        if (coverLabel) coverLabel.textContent = nextLabel;
+
+        var params = new URLSearchParams(window.location.search);
+        var guestTo = params.get('to');
+        if (!guestTo || !guestTo.trim()) {
+            var defName = lang === 'en' ? 'Guest' : 'Tamu Undangan';
+            var gn = document.getElementById('guestName');
+            var egn = document.getElementById('envGuestName');
+            if (gn) gn.textContent = defName;
+            if (egn) egn.textContent = defName;
+        }
+
         document.documentElement.lang = lang;
         localStorage.setItem('lang', lang);
         currentLang = lang;
     }
 
     document.addEventListener('DOMContentLoaded', function () {
-        var btn = document.getElementById('langToggle');
-        if (btn) {
-            btn.addEventListener('click', function () {
-                applyLang(currentLang === 'id' ? 'en' : 'id');
-            });
+        function toggleLang() {
+            applyLang(currentLang === 'id' ? 'en' : 'id');
         }
+        var btn = document.getElementById('langToggle');
+        if (btn) btn.addEventListener('click', toggleLang);
+        var coverBtn = document.getElementById('coverLangToggle');
+        if (coverBtn) coverBtn.addEventListener('click', toggleLang);
         applyLang(currentLang);
     });
 })();

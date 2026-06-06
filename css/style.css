@@ -109,6 +109,40 @@ a {
     pointer-events: none;
 }
 
+.cover-lang {
+    position: absolute;
+    top: 1.3rem;
+    right: 1.3rem;
+    z-index: 5;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.45rem 0.85rem;
+    background: rgba(13, 2, 7, 0.55);
+    border: 1px solid rgba(201, 168, 76, 0.45);
+    border-radius: 50px;
+    color: var(--gold);
+    font-family: var(--font-serif);
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.cover-lang svg {
+    width: 15px;
+    height: 15px;
+    display: block;
+}
+
+.cover-lang:hover {
+    background: var(--gold);
+    color: var(--black);
+    border-color: var(--gold-light);
+    box-shadow: 0 0 16px rgba(201, 168, 76, 0.35);
+}
+
 .cover-content {
     position: relative;
     z-index: 3;
@@ -2516,6 +2550,18 @@ section:not(#cover) {
     .open-btn {
         letter-spacing: 0.2em;
         padding: 0.9rem 2rem;
+    }
+
+    .cover-lang {
+        top: 1rem;
+        right: 1rem;
+        padding: 0.4rem 0.7rem;
+        font-size: 0.68rem;
+    }
+
+    .cover-lang svg {
+        width: 13px;
+        height: 13px;
     }
 
     .guest-card {
