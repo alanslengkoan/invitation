@@ -97,8 +97,10 @@ window.scrollTo(0, 0);
     var guestTo = params.get('to');
     var _lang = localStorage.getItem('lang') || 'id';
     var name = (guestTo && guestTo.trim()) ? decodeURIComponent(guestTo.trim()) : (_lang === 'en' ? 'Guest' : 'Tamu Undangan');
-    document.getElementById('guestName').textContent = name;
-    document.getElementById('envGuestName').textContent = name;
+    var gn = document.getElementById('guestName');
+    if (gn) gn.textContent = name;
+    var egn = document.getElementById('envGuestName');
+    if (egn) egn.textContent = name;
 })();
 
 // ===== COUNTDOWN TIMER =====

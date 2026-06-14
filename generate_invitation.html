@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Generator Pesan Undangan</title>
+<style>
+  :root{
+    --cream:#fdfaf4;
+    --ink:#2e2a26;
+    --gold:#a9824e;
+    --gold-soft:#f1e6d3;
+    --line:#e3d9c8;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    font-family:'Georgia','Times New Roman',serif;
+    background:var(--cream);
+    color:var(--ink);
+    padding:32px 16px;
+    display:flex;
+    justify-content:center;
+  }
+  .wrap{
+    max-width:720px;
+    width:100%;
+  }
+  h1{
+    font-size:1.6rem;
+    letter-spacing:.04em;
+    text-align:center;
+    margin:0 0 4px;
+    font-weight:400;
+  }
+  .sub{
+    text-align:center;
+    color:#8a8073;
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:.85rem;
+    margin-bottom:28px;
+    letter-spacing:.03em;
+  }
+  .card{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:24px;
+    margin-bottom:20px;
+  }
+  label{
+    display:block;
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:.75rem;
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    color:#8a8073;
+    margin-bottom:8px;
+  }
+  input, textarea{
+    width:100%;
+    font-family:inherit;
+    font-size:1rem;
+    padding:10px 12px;
+    border:1px solid var(--line);
+    border-radius:6px;
+    background:var(--cream);
+    color:var(--ink);
+  }
+  textarea{
+    min-height:90px;
+    resize:vertical;
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:.9rem;
+  }
+  .hint{
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:.78rem;
+    color:#a39a8c;
+    margin-top:6px;
+  }
+  button{
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:.85rem;
+    letter-spacing:.05em;
+    text-transform:uppercase;
+    background:var(--gold);
+    color:#fff;
+    border:none;
+    padding:12px 22px;
+    border-radius:6px;
+    cursor:pointer;
+    transition:background .15s ease;
+  }
+  button:hover{ background:#8f6b3e; }
+  button.secondary{
+    background:transparent;
+    color:var(--gold);
+    border:1px solid var(--gold);
+  }
+  button.secondary:hover{
+    background:var(--gold-soft);
+  }
+  .actions{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+    margin-top:16px;
+  }
+  .results{
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+  }
+  .result-card{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:10px;
+    overflow:hidden;
+  }
+  .result-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:12px 18px;
+    background:var(--gold-soft);
+    font-family:Arial,Helvetica,sans-serif;
+  }
+  .result-head .name{
+    font-weight:bold;
+    font-size:.95rem;
+  }
+  .result-head .copy-btn{
+    padding:6px 14px;
+    font-size:.72rem;
+  }
+  .result-body{
+    padding:18px;
+    white-space:pre-wrap;
+    line-height:1.6;
+    font-size:.95rem;
+  }
+  .result-body a{
+    color:var(--gold);
+    word-break:break-all;
+  }
+  .empty{
+    text-align:center;
+    color:#a39a8c;
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:.9rem;
+    padding:30px 0;
+  }
+  .copied-msg{
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:.72rem;
+    color:#3a8a52;
+    margin-left:8px;
+    opacity:0;
+    transition:opacity .2s ease;
+  }
+  .copied-msg.show{ opacity:1; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>Generator Pesan Undangan</h1>
+  <div class="sub">Masukkan daftar nama untuk membuat pesan &amp; tautan personal</div>
+
+  <div class="card">
+    <label for="baseUrl">Base URL</label>
+    <input id="baseUrl" type="text" value="https://wedding-alan-kris.netlify.app/?to=">
+
+    <label for="names" style="margin-top:18px;">Daftar Nama (satu nama per baris)</label>
+    <textarea id="names" placeholder="Contoh:
+Yerwin Toga Sambolangi
+Yerik Pamra Sambolangi
+Alviana Vinandia
+Wiwin Irianti"></textarea>
+    <div class="hint">Setiap baris akan dijadikan satu pesan undangan dengan tautan personal.</div>
+
+    <div class="actions">
+      <button onclick="generate()">Generate Pesan</button>
+      <button class="secondary" onclick="copyAll()">Copy Semua</button>
+    </div>
+  </div>
+
+  <div class="results" id="results">
+    <div class="empty">Belum ada pesan yang dibuat.</div>
+  </div>
+
+</div>
+
+<script>
+const template = (name, link) => `Yth. Bapak/Ibu/Saudara/i
+*${name}*
+
+Salam sejahtera.
+
+Dengan penuh syukur, kami mengundang Bapak/Ibu/Saudara/i untuk turut hadir dan menyaksikan momen sakral pernikahan kami:
+
+*Alan & Kris*
+
+Informasi mengenai waktu, tempat, serta rangkaian acara dapat dilihat melalui tautan berikut:
+
+*${link}*
+
+Merupakan kebahagiaan tersendiri bagi kami apabila Bapak/Ibu/Saudara/i berkenan meluangkan waktu untuk hadir serta memberikan doa restu bagi langkah baru yang akan kami awali bersama.
+
+Atas perhatian, kehadiran, dan doa yang tulus, kami mengucapkan terima kasih.
+
+Hormat kami,
+
+*Keluarga Besar Kedua Mempelai*`;
+
+let generatedMessages = [];
+
+function generate(){
+  const baseUrl = document.getElementById('baseUrl').value.trim();
+  const namesRaw = document.getElementById('names').value;
+  const names = namesRaw.split('\n').map(n => n.trim()).filter(n => n.length > 0);
+  const resultsEl = document.getElementById('results');
+
+  if(names.length === 0){
+    resultsEl.innerHTML = '<div class="empty">Belum ada pesan yang dibuat.</div>';
+    generatedMessages = [];
+    return;
+  }
+
+  generatedMessages = names.map(name => {
+    const encoded = encodeURIComponent(name).replace(/%20/g, '+');
+    const link = baseUrl + encoded;
+    const message = template(name, link);
+    return { name, link, message };
+  });
+
+  resultsEl.innerHTML = generatedMessages.map((item, idx) => `
+    <div class="result-card">
+      <div class="result-head">
+        <span class="name">${escapeHtml(item.name)}</span>
+        <span>
+          <button class="secondary copy-btn" onclick="copyOne(${idx})">Copy</button>
+          <span class="copied-msg" id="copied-${idx}">Disalin!</span>
+        </span>
+      </div>
+      <div class="result-body">${escapeHtml(item.message)}</div>
+    </div>
+  `).join('');
+}
+
+function escapeHtml(str){
+  return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+function copyOne(idx){
+  const text = generatedMessages[idx].message;
+  navigator.clipboard.writeText(text).then(() => {
+    const el = document.getElementById('copied-' + idx);
+    el.classList.add('show');
+    setTimeout(() => el.classList.remove('show'), 1500);
+  });
+}
+
+function copyAll(){
+  if(generatedMessages.length === 0) return;
+  const all = generatedMessages.map(item => item.message).join('\n\n---\n\n');
+  navigator.clipboard.writeText(all).then(() => {
+    alert('Semua pesan berhasil disalin!');
+  });
+}
+</script>
+</body>
+</html>
