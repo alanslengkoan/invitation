@@ -99,8 +99,6 @@ window.scrollTo(0, 0);
     var name = (guestTo && guestTo.trim()) ? decodeURIComponent(guestTo.trim()) : (_lang === 'en' ? 'Guest' : 'Tamu Undangan');
     var gn = document.getElementById('guestName');
     if (gn) gn.textContent = name;
-    var egn = document.getElementById('envGuestName');
-    if (egn) egn.textContent = name;
 })();
 
 // ===== COUNTDOWN TIMER =====
@@ -599,7 +597,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             'save-date-text': 'Tandai harinya agar tidak terlewat',
             'save-date-btn': 'Simpan Tanggal',
             'rsvp-title': 'Konfirmasi Kehadiran',
-            'rsvp-sub': 'Mohon konfirmasi kehadiran Anda sebelum 19 · 06 · 2026',
+            'rsvp-sub': 'Mohon konfirmasi kehadiran Anda sebelum 23 · 06 · 2026',
             'rsvp-ph-name': 'Nama Lengkap Anda',
             'rsvp-opt-default': 'Apakah Anda akan hadir?',
             'rsvp-opt-yes': 'Ya, saya akan hadir',
@@ -609,8 +607,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             'rsvp-success': '✦ Terima kasih! Kehadiran Anda telah kami catat. ✦',
             'gb-ph-msg': 'Tuliskan doa dan ucapan selamat untuk Alan & Kris...',
             'amplop-sub': 'Doa dan kehadiran Anda adalah hadiah terbesar bagi kami.<br>Bagi yang ingin memberikan berkat, kami dengan rendah hati<br>menerima melalui rekening berikut.',
-            'env-label-to': 'Untuk',
-            'env-label-from': 'dari',
             'env-hint': '— ketuk untuk membuka —',
             'env-content-label': 'Nomor Rekening',
             'env-content-sub': 'Pilih bank untuk menyalin nomor rekening',
@@ -670,7 +666,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             'save-date-text': 'Mark the date so you don\'t miss it',
             'save-date-btn': 'Save the Date',
             'rsvp-title': 'RSVP',
-            'rsvp-sub': 'Please confirm your attendance before 19 · 06 · 2026',
+            'rsvp-sub': 'Please confirm your attendance before 23 · 06 · 2026',
             'rsvp-ph-name': 'Your Full Name',
             'rsvp-opt-default': 'Will you be attending?',
             'rsvp-opt-yes': 'Yes, I will attend',
@@ -680,8 +676,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             'rsvp-success': '✦ Thank you! Your attendance has been noted. ✦',
             'gb-ph-msg': 'Write your prayers and wishes for Alan & Kris...',
             'amplop-sub': 'Your presence and prayers are the greatest gift to us.<br>For those who wish to give a blessing, we humbly<br>receive it through the following accounts.',
-            'env-label-to': 'For',
-            'env-label-from': 'from',
             'env-hint': '— tap to open —',
             'env-content-label': 'Account Details',
             'env-content-sub': 'Select bank to copy account number',
@@ -729,9 +723,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         if (!guestTo || !guestTo.trim()) {
             var defName = lang === 'en' ? 'Guest' : 'Tamu Undangan';
             var gn = document.getElementById('guestName');
-            var egn = document.getElementById('envGuestName');
             if (gn) gn.textContent = defName;
-            if (egn) egn.textContent = defName;
         }
 
         document.documentElement.lang = lang;
